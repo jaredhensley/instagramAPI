@@ -6,7 +6,7 @@ $(document).ready(function(){
      count: 10
     };
 
-    url = "https://api.instagram.com/v1/tags/coversong/media/recent?client_id=2a86eedc95bf44a691694851ae41161e";
+    url = "https://api.instagram.com/v1/tags/coversong/media/recent?client_id=2b1f615fe19247a7a8da17d7924d2f60";
 
     $.get(url, params, function(results) {
       myData = (results);
