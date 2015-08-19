@@ -52,6 +52,7 @@ $(document).ready(function() {
         } // end getInstagramPhotoList
       getInstagramAccessToken();
       getInstagramPhotoList();
+      return photoList_Instagram;
     } // end getRequest
   getRequest();
   console.log(photoList_Instagram);
