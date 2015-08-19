@@ -14,6 +14,7 @@ $(document).ready(function(){
         console.log("insideGetInstagramAccessToken");
         var hash = location.hash.replace('#', '');
         console.log(hash);
+        console.log(hash.indexOf("access_token"));
         if (hash.indexOf("access_token") >= 0) {
           instagramToken = new AccessToken(hash);
           console.log(instagramToken);
