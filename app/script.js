@@ -19,7 +19,7 @@ $(document).ready(function(){
           console.log(instagramToken);
           console.log(AccessToken.value);
         } else {
-          instagramToken = null;
+          /*instagramToken = null;*/
           alert('null');
         }
       }
