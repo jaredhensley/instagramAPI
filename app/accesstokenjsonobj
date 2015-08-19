@@ -1,0 +1,8 @@
+
+$ curl -F 'client_id=2a86eedc95bf44a691694851ae41161e' -F 'client_secret=d13d6c996a0e4973abde96c6adc45fe8' -F
+ 'grant_type=authorization_code' -F 'redirect_uri=https://jaredhensley.github.io/instagramAPI/' -F 'code=2e29
+77a365504742b99f3e81a24fac9f' https://api.instagram.com/oauth/access_token
+{"access_token":"30069279.2a86eed.110620b05b674816bd8de88771420a2e","user":{"username":"jahensle","bio":"Front
+ End Web Developer","website":"http:\/\/www.twitter.com\/Iamjahweb","profile_picture":"https:\/\/igcdn-photos-
+f-a.akamaihd.net\/hphotos-ak-xaf1\/t51.2885-19\/11324268_850296175060517_1729456743_a.jpg","full_name":"Jared
+Hensley","id":"30069279"}}

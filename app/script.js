@@ -1,19 +1,23 @@
 $(document).ready(function(){
 
- function getRequest() {
- 	alert();
+ function getRequest(searchEntry) {
+ 
     var params = {
-     count: 10
+     COUNT: 10,
+     /*Q: searchEntry*/				
+    /* q: searchEntry*/
+
     };
 
-    url = "https://api.instagram.com/v1/tags/coversong/media/recent?client_id=2b1f615fe19247a7a8da17d7924d2f60";
+    url = "https://api.instagram.com/v1/tags/coversongs/media/recent?access_token=30069279.2a86eed.110620b05b674816bd8de88771420a2e";
 
-    $.get(url, params, function(results) {
+    var result = $.get(url, function(results) {
       myData = (results);
       console.log(results);
  
     });
-  }
+	}
 
   getRequest();
+ 
 });
