@@ -18,7 +18,7 @@ $(document).ready(function(){
         if (hash.indexOf("access_token") >= 0) {
           instagramToken = new AccessToken(hash);
           console.log(instagramToken);
-          console.log(AccessToken.value);
+          console.log(instagramToken.value);
         } else {
           /*instagramToken = null;*/
           alert('null');
@@ -38,6 +38,7 @@ $(document).ready(function(){
           type: "GET",
     			dataType: 'jsonp',
     			success: function(response){
+            console.log(response);
     				response.data.forEach(function(photo) {
               photoList_Instagram.push(photo);
             });
@@ -52,6 +53,7 @@ $(document).ready(function(){
       } // end getInstagramPhotoList
       getInstagramAccessToken();
       getInstagramPhotoList();
+      console.log(photoList_Instagram);
   } // end getRequest
   getRequest();
 
