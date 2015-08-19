@@ -12,7 +12,9 @@ $(document).ready(function() {
 
       function getInstagramAccessToken() {
         console.log("insideGetInstagramAccessToken");
+        console.log(location.href);
         var hash = location.hash.replace('#', '');
+        console.log(location.href);
         console.log(hash);
         console.log(hash.indexOf("access_token"));
         if (hash.indexOf("access_token") >= 0) {
