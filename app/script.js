@@ -17,7 +17,7 @@ function getRequest(searchEntry) {
 			}
 		});
 	}
-}
+
   getRequest();
 
 
