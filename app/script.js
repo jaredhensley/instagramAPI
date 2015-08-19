@@ -57,7 +57,6 @@ $(document).ready(function() {
       return photoList_Instagram;
     } // end getRequest
   getRequest();
-  console.log(photoList_Instagram);
 });
 
 /*access_token=30069279.2a86eed.110620b05b674816bd8de88771420a2e";*/
