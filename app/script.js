@@ -3,7 +3,7 @@ $(document).ready(function() {
   function getRequest(searchEntry) {
       console.log("inside getRequest");
 
-      location.href = 'https://instagram.com/oauth/authorize/?client_id=2a86eedc95bf44a691694851ae41161e&redirect_uri=https://jaredhensley.github.io/instagramAPI/&response_type=token';
+      /*location.href = 'https://instagram.com/oauth/authorize/?client_id=2a86eedc95bf44a691694851ae41161e&redirect_uri=https://jaredhensley.github.io/instagramAPI/&response_type=token';*/
 
       function AccessToken(value) {
         this.value = value;
