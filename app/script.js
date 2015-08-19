@@ -12,9 +12,9 @@ $(document).ready(function(){
 
       function getInstagramAccessToken() {
         console.log("insideGetInstagramAccessToken");
-        var hash = location.hash.replace('#', '')
-        if (hash.indexof("access_token") >= 0) {
-          instagramToken = new AccessToken(hash)
+        var hash = location.hash.replace('#', '');
+        if (hash.indexOf("access_token") >= 0) {
+          instagramToken = new AccessToken(hash);
           console.log(AccessToken.value);
         } else {
           instagramToken = null;
@@ -37,9 +37,9 @@ $(document).ready(function(){
     			success: function(response){
     				response.data.forEach(function(photo) {
               photoList_Instagram.push(photo);
-            })
+            });
     				if (response.pagination.next_url) {
-              getInstagramPhotoList(response.pagination.next_url)
+              getInstagramPhotoList(response.pagination.next_url);
 
             } else {
               alert('done');
