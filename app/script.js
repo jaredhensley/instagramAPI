@@ -16,7 +16,7 @@ function getRequest(searchEntry) {
 				console.log(response.data);
 			}
 		});
-	}*/
+	}
 }
   getRequest();
 
