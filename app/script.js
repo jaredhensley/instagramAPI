@@ -13,8 +13,10 @@ $(document).ready(function(){
       function getInstagramAccessToken() {
         console.log("insideGetInstagramAccessToken");
         var hash = location.hash.replace('#', '');
+        console.log(hash);
         if (hash.indexOf("access_token") >= 0) {
           instagramToken = new AccessToken(hash);
+          console.log(instagramToken);
           console.log(AccessToken.value);
         } else {
           instagramToken = null;
@@ -25,7 +27,7 @@ $(document).ready(function(){
       var photoList_Instagram = [];
       function getInstagramPhotoList(nextPageUrl) {
         var requestUrl = 'https://api.instagram.com/v1/tags/localmusic/media/recent' + "?" + instagramToken.value;
-
+        console.log(requestUrl);
         if(nextPageUrl) {
           alert(nextPageUrl);
           requestUrl = nextPageUrl;
