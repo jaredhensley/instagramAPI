@@ -8,9 +8,7 @@
       function getInstagramAccessToken() {
         
         var hash = location.hash.replace('#', '');
-        console.log(location);
-        console.log(location.href);
-        console.log(hash);
+        
         if (hash.indexOf("access_token") >= 0) {
           instagramToken = new AccessToken(hash);
           getInstagramPhotoList(instagramToken);
@@ -19,13 +17,18 @@
         }
       }
 
-      var photoList_Instagram = [];
+      function populateHTML(totalResults) {
+        //code here
+
+      }
+
+      var totalResults = [];
 
       function getInstagramPhotoList(nextPageUrl) {
-          var requestUrl = 'https://api.instagram.com/v1/tags/localmusic/media/recent' + '?' + instagramToken.value;
-          /*if (nextPageUrl) {
+          var requestUrl = 'https://api.instagram.com/v1/tags/saintsandsailors/media/recent' + '?' + instagramToken.value;
+          if (nextPageUrl) {
             requestUrl = nextPageUrl;
-          }*/
+          }
           $.ajax({
             url: requestUrl,
             type: "GET",
@@ -33,17 +36,17 @@
             success: function(response) {
                 console.log(response);
               response.data.forEach(function(photo) {
-                  photoList_Instagram.push(photo);
+                  totalResults.push(photo);
                 });
-               /* if (response.pagination.next_url) {
+               if (response.pagination.next_url) {
                   getInstagramPhotoList(response.pagination.next_url);
 
                 } else {
                   alert('done');
-                }*/
+                }
             } //success: callback
           }); // end ajax call
-          return photoList_Instagram;
+          populateHTML(totalResults);
       } // end getInstagramPhotoList
 
 $(document).ready(function() {
