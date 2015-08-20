@@ -52,7 +52,7 @@ function getRequest() {
             } //success: callback
           }); // end ajax call
       } // end getInstagramPhotoList
-      
+  getInstagramAccessToken();    
   getInstagramPhotoList();
 } // end getRequest
 
