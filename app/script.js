@@ -26,9 +26,9 @@
 
       function getInstagramPhotoList(nextPageUrl) {
           var requestUrl = 'https://api.instagram.com/v1/tags/saintsandsailors/media/recent' + '?' + instagramToken.value;
-          if (nextPageUrl) {
+         /* if (nextPageUrl) {
             requestUrl = nextPageUrl;
-          }
+          }*/
           $.ajax({
             url: requestUrl,
             type: "GET",
@@ -38,12 +38,12 @@
               response.data.forEach(function(photo) {
                   totalResults.push(photo);
                 });
-               if (response.pagination.next_url) {
+               /*if (response.pagination.next_url) {
                   getInstagramPhotoList(response.pagination.next_url);
 
                 } else {
                   alert('done');
-                }
+                }*/
             } //success: callback
           }); // end ajax call
           populateHTML(totalResults);
