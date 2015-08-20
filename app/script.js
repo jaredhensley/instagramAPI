@@ -1,6 +1,4 @@
-$(document).ready(function() {
-
-  function getRequest(searchEntry) {
+function getRequest(searchEntry) {
       console.log("inside getRequest");
 
       /*location.href = 'https://instagram.com/oauth/authorize/?client_id=2a86eedc95bf44a691694851ae41161e&redirect_uri=https://jaredhensley.github.io/instagramAPI/&response_type=token';*/
@@ -32,10 +30,10 @@ $(document).ready(function() {
       function getInstagramPhotoList(nextPageUrl) {
         getInstagramAccessToken();
           var requestUrl = 'https://api.instagram.com/v1/tags/localmusic/media/recent' + "?" + instagramToken.value;
-          if (nextPageUrl) {
+          /*if (nextPageUrl) {
             alert(nextPageUrl);
             requestUrl = nextPageUrl;
-          }
+          }*/
           $.ajax({
             url: requestUrl,
             type: "GET",
@@ -44,12 +42,12 @@ $(document).ready(function() {
                 response.data.forEach(function(photo) {
                   photoList_Instagram.push(photo);
                 });
-                if (response.pagination.next_url) {
+               /* if (response.pagination.next_url) {
                   getInstagramPhotoList(response.pagination.next_url);
 
                 } else {
                   alert('done');
-                }
+                }*/
               } //success: callback
           }); // end ajax call
         } // end getInstagramPhotoList
@@ -57,6 +55,10 @@ $(document).ready(function() {
       getInstagramPhotoList();
       return photoList_Instagram;
     } // end getRequest
+
+$(document).ready(function() {
+
+
   getRequest();
 });
 
