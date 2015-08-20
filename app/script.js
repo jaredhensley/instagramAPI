@@ -32,9 +32,9 @@
             dataType: 'jsonp',
             success: function(response) {
                 console.log(response);
-              /*  response.data.forEach(function(photo) {
+              response.data.forEach(function(photo) {
                   photoList_Instagram.push(photo);
-                })*/;
+                });
                /* if (response.pagination.next_url) {
                   getInstagramPhotoList(response.pagination.next_url);
 
