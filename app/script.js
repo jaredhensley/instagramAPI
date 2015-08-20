@@ -24,7 +24,6 @@
       function getInstagramPhotoList(nextPageUrl) {
           var requestUrl = 'https://api.instagram.com/v1/tags/localmusic/media/recent' + '?' + instagramToken.value;
           /*if (nextPageUrl) {
-            alert(nextPageUrl);
             requestUrl = nextPageUrl;
           }*/
           $.ajax({
@@ -44,6 +43,7 @@
                 }*/
             } //success: callback
           }); // end ajax call
+          return photoList_Instagram;
       } // end getInstagramPhotoList
 
 $(document).ready(function() {
