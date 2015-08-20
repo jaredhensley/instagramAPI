@@ -14,3 +14,10 @@ body {
 	height: 100vh;
 	background-color: #BAB65B;
 }
+
+.login {
+	margin-top: 0 auto;
+	border-radius: 10px;
+	height: 2em;
+
+}

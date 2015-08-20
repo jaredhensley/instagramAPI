@@ -8,7 +8,9 @@
       function getInstagramAccessToken() {
         
         var hash = location.hash.replace('#', '');
-      
+        console.log(location);
+        console.log(location.href);
+        console.log(hash);
         if (hash.indexOf("access_token") >= 0) {
           instagramToken = new AccessToken(hash);
           getInstagramPhotoList(instagramToken);
