@@ -10,7 +10,7 @@ function getInstagramAccessToken() {
   if (hash.indexOf("access_token") >= 0) {
     instagramToken = new AccessToken(hash);
     getInstagramPhotoList(instagramToken);
-  else {
+  } else {
     instagramToken = null;
   }
 }
