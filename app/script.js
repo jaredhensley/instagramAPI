@@ -1,6 +1,6 @@
 
 function AccessToken(value) {
-        this.value = value;
+  this.value = value;
 }
 
 function getInstagramAccessToken() {
@@ -49,5 +49,15 @@ function getInstagramPhotoList(nextPageUrl) {
 
 $(document).ready(function() {
   getInstagramAccessToken();
+  var map;
+  function initMap() {
+    map = new google.Map(document.getElementbyID('map'), {
+      center: {lat: -34.397, lng: 150.644},
+      zoom: 8
+
+
+    });
+
+  }
 });
 

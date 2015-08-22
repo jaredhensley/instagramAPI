@@ -21,3 +21,8 @@ body {
 	height: 2em;
 
 }
+
+#map {
+	height: 100%;
+
+}
