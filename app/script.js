@@ -18,7 +18,7 @@ function getInstagramAccessToken() {
 function populateHTML(totalResults) {
   //code here
   console.log(totalResults);
-  $.each(results,function (index, value) {
+  $.each(totalResults,function (index, value) {
     $(".videos").append(value.images.thumbnail.url);
 
   });
