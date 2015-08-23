@@ -8,7 +8,8 @@ function getInstagramAccessToken() {
 
   if (hash.indexOf("access_token") >= 0) {
     instagramToken = new AccessToken(hash);
-    getInstagramPhotoList(instagramToken);
+    $('.igbutton').on('click', function() {getInstagramPhotoList(instagramToken);
+    });
   } else {
     instagramToken = null;
   }
