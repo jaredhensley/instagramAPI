@@ -18,6 +18,10 @@ function getInstagramAccessToken() {
 function populateHTML(totalResults) {
   //code here
   console.log(totalResults);
+  $.each(results,function (index, value) {
+    $(".videos").append(value.images.thumbnail.url);
+
+  });
 }
 
 var totalResults = [];
@@ -68,11 +72,11 @@ function initMap() {
     geocoder.geocode({
       'address': address
     }, function(results, status) {
+      console.log(results);
       if (status === google.maps.GeocoderStatus.OK) {
         resultsMap.setCenter(results[0].geometry.location);
         coords.push(results[0].geometry.location);
         console.log(coords);
-        console.log(coords[0].G)
         var marker = new google.maps.Marker({
           map: resultsMap,
           position: results[0].geometry.location
