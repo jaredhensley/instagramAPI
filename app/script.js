@@ -67,6 +67,7 @@ function initMap() {
         resultsMap.setCenter(results[0].geometry.location);
         coords.push(results[0].geometry.location);
         console.log(coords);
+        console.log(coords[0].G)
         var marker = new google.maps.Marker({
           map: resultsMap,
           position: results[0].geometry.location
