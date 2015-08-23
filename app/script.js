@@ -9,14 +9,14 @@ function getInstagramAccessToken() {
   if (hash.indexOf("access_token") >= 0) {
     console.log('test');
     instagramToken = new AccessToken(hash);
-    instagramAjaxCall();
+    instagramAjaxCall(instagramToken);
   } else {
     console.log('no token');
     instagramToken = null;
   }
 }
 
-function instagramAjaxCall () {
+function instagramAjaxCall (instagramToken) {
   $('.igbutton').on('click', function() {getInstagramPhotoList(instagramToken);
   });
 }
@@ -32,10 +32,10 @@ function populateHTML(totalResults) {
 
 var totalResults = [];
 
-function getInstagramPhotoList(nextPageUrl) {
+function getInstagramPhotoList(token) {
 
     /*var requestUrl = 'https://api.instagram.com/v1/users/self/media/liked' + '?' + instagramToken.value;*/
-var requestUrl = 'https://api.instagram.com/v1/media/search?lat=' + coords[0].G + '&lng=' + coords[0].K + '&' + instagramToken.value;
+var requestUrl = 'https://api.instagram.com/v1/media/search?lat=' + coords[0].G + '&lng=' + coords[0].K + '&' + token.value;
     $.ajax({
       url: requestUrl,
       type: "GET",
