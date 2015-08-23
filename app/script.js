@@ -51,9 +51,9 @@ var requestUrl = 'https://api.instagram.com/v1/media/search?lat=' + coords[0].G 
           });
         } //end success callback
     }); // end ajax call
-
+    console.log(totalResults);
     populateHTML(totalResults);
-
+    console.log(totalResults);
   } // end getInstagramPhotoList
 
 var map;
