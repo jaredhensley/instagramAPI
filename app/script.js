@@ -9,11 +9,15 @@ function getInstagramAccessToken() {
   if (hash.indexOf("access_token") >= 0) {
     console.log('test');
     instagramToken = new AccessToken(hash);
-    $('.igbutton').on('click', function() {getInstagramPhotoList(instagramToken);
-    });
+    instagramAjaxCall();
   } else {
     instagramToken = null;
   }
+}
+
+function instagramAjaxCall () {
+  $('.igbutton').on('click', function() {getInstagramPhotoList(instagramToken);
+  });
 }
 
 function populateHTML(totalResults) {
