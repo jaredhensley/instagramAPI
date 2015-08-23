@@ -29,9 +29,13 @@ var requestUrl = 'https://api.instagram.com/v1/media/search?lat=' + coords[0].G 
     $.ajax({
       url: requestUrl,
       type: "GET",
+      data: {
+        DISTANCE: 5000,
+        MAX_TIMESTAMP: 7
+
+      },
       dataType: 'jsonp',
       success: function(response) {
-          console.log(response);
           response.data.forEach(function(photo) {
             totalResults.push(photo);
           });
