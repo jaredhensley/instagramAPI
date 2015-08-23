@@ -67,14 +67,14 @@ function initMap() {
 
   var geocoder = new google.maps.Geocoder();
 
-  $('#submit').on('click', function() {
+  document.getElementById('submit').addEventListener('click', function() {
     geocodeAddress(geocoder, map);
 
   });
 }
 
   function geocodeAddress(geocoder, resultsMap) {
-    var address = $('#address').value;
+    var address = document.getElementById('address').value;
     geocoder.geocode({
       'address': address
     }, function(results, status) {
