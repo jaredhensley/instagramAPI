@@ -23,8 +23,8 @@ var totalResults = [];
 
 function getInstagramPhotoList(nextPageUrl) {
 
-    var requestUrl = 'https://api.instagram.com/v1/users/self/media/liked' + '?' + instagramToken.value;
-
+    /*var requestUrl = 'https://api.instagram.com/v1/users/self/media/liked' + '?' + instagramToken.value;*/
+var requestUrl = 'https://api.instagram.com/v1/media/search?lat=48.858844&lng=2.294351&' + instagramToken.value;
     $.ajax({
       url: requestUrl,
       type: "GET",
