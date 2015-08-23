@@ -47,12 +47,13 @@ var requestUrl = 'https://api.instagram.com/v1/media/search?lat=' + coords[0].G 
       dataType: 'jsonp',
       success: function(response) {
           response.data.forEach(function(data) {
-            totalResults.push(data);
+          totalResults.push(data);
           });
-        } //end success callback
-        console.log(totalResults);
-    populateHTML(totalResults);
-    console.log(totalResults);
+      console.log(totalResults);
+      populateHTML(totalResults);
+      console.log(totalResults);
+      } //end success callback
+
     }); // end ajax call
 
   } // end getInstagramPhotoList
