@@ -54,3 +54,7 @@ body {
 #panel i, .panel i {
   font-size: 12px;
 }
+
+.results {
+	height: 100%;
+}

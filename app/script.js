@@ -19,7 +19,7 @@ function populateHTML(totalResults) {
   //code here
   console.log(totalResults);
   $.each(totalResults,function (index, value) {
-    $(".videos").append("<img src=" + value.images.thumbnail.url + ">" + "<br>");
+    $(".results").append("<img src=" + value.images.thumbnail.url + ">" + "<br>");
 
   });
 }
