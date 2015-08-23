@@ -19,7 +19,7 @@ function populateHTML(totalResults) {
   //code here
   console.log(totalResults);
   $.each(totalResults,function (index, value) {
-    $(".results").append("<img src=" + value.images.thumbnail.url + ">" + "<br>");
+    $(".results").append("<img src=" + value.images.thumbnail.url + ">" + " ");
 
   });
 }
@@ -40,8 +40,8 @@ var requestUrl = 'https://api.instagram.com/v1/media/search?lat=' + coords[0].G 
       },
       dataType: 'jsonp',
       success: function(response) {
-          response.data.forEach(function(photo) {
-            totalResults.push(photo);
+          response.data.forEach(function(data) {
+            totalResults.push(data);
           });
         } //end success callback
     }); // end ajax call
