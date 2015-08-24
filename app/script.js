@@ -54,7 +54,7 @@ function getInstagramPhotoList(token) {
           response.data.forEach(function(data) {
             totalResults.push(data);
           });
-          lastCreat = response.data[response.data.length-1];
+          lastCreat = response.data[response.data.length-1].created_time;
           console.log(lastCreat);
           populateHTML(totalResults);
 
