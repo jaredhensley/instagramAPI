@@ -94,6 +94,7 @@ function geocodeAddress(geocoder, resultsMap) {
     }
   });
   $("#address").val("");
+  $(".results").html("");
 }
 
 $(document).ready(function() {
