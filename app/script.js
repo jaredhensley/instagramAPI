@@ -25,12 +25,13 @@ function getInstagramAccessToken() {
 
 function instagramAjaxCall(instagramToken) {
   $('.igbutton').on('click', function() {
-    getInstagramPhotoList(instagramToken);
+    getInstagramPhotoList(instagramToken, lastCreat);
   });
 }
 
 
 function populateHTML(totalResults) {
+  console.log(totalResults[totalResults.length-1].created_time);
   lastCreat = totalResults[totalResults.length-1].created_time;
   console.log(totalResults);
   $.each(totalResults, function(index, value) {
