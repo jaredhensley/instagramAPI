@@ -41,8 +41,8 @@ function getInstagramPhotoList(token) {
       url: requestUrl,
       type: "GET",
       data: {
-        distance: 5000,
-        min_timestamp:
+        DISTANCE: 5000,
+        MAX_TIMESTAMP: 7
 
       },
       dataType: 'jsonp',
