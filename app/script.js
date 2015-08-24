@@ -42,8 +42,7 @@ function getInstagramPhotoList(token) {
       type: "GET",
       data: {
         distance: 5000,
-        count: -1
-
+        
       },
       dataType: 'jsonp',
       success: function(response) {
