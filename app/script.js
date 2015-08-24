@@ -1,7 +1,7 @@
 var totalResults = [];
 var map;
 var coords = [];
-
+var lastCreat;
 
 function AccessToken(value) {
   this.value = value;
@@ -47,13 +47,14 @@ function getInstagramPhotoList(token) {
     $.ajax({
       url: requestUrl,
       type: "GET",
-      data: { distance: 5000, count: 100 }, 
+      data: { distance: 5000, count: 20, max_timestamp: lastCreat }, 
       dataType: 'jsonp',
       success: function(response) {
           console.log(response);
           response.data.forEach(function(data) {
             totalResults.push(data);
           });
+          lastCreat = response.data[response.data.length-1];
           populateHTML(totalResults);
 
         } //end success callback
