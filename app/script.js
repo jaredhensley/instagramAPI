@@ -41,6 +41,7 @@ function getInstagramPhotoList(token) {
       url: requestUrl,
       type: "GET",
       data: { distance: 5000, count: 100 },
+      pagination: 
       dataType: 'jsonp',
       success: function(response) {
           console.log(response);
@@ -93,6 +94,7 @@ function geocodeAddress(geocoder, resultsMap) {
       alert('Geocode was not successful for the following reason: ' + status);
     }
   });
+  address.val("");
 }
 
 $(document).ready(function() {
