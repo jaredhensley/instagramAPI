@@ -1,6 +1,12 @@
+var totalResults = [];
+var map;
+var coords = [];
+
+
 function AccessToken(value) {
   this.value = value;
 }
+
 
 function getInstagramAccessToken() {
 
@@ -16,11 +22,13 @@ function getInstagramAccessToken() {
   }
 }
 
+
 function instagramAjaxCall(instagramToken) {
   $('.igbutton').on('click', function() {
     getInstagramPhotoList(instagramToken);
   });
 }
+
 
 function populateHTML(totalResults) {
   //code here
@@ -31,7 +39,6 @@ function populateHTML(totalResults) {
   });
 }
 
-var totalResults = [];
 
 function getInstagramPhotoList(token) {
 
@@ -55,8 +62,6 @@ function getInstagramPhotoList(token) {
     coords = [];
   } // end getInstagramPhotoList
 
-var map;
-var coords = [];
 
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
@@ -74,6 +79,7 @@ function initMap() {
 
   });
 }
+
 
 function geocodeAddress(geocoder, resultsMap) {
   var address = document.getElementById('address').value;
@@ -97,6 +103,7 @@ function geocodeAddress(geocoder, resultsMap) {
   $(".results").html("");
   totalResults = [];
 }
+
 
 $(document).ready(function() {
 
