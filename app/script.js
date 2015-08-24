@@ -55,6 +55,7 @@ function getInstagramPhotoList(token) {
             totalResults.push(data);
           });
           lastCreat = response.data[response.data.length-1];
+          console.log(lastCreat);
           populateHTML(totalResults);
 
         } //end success callback
