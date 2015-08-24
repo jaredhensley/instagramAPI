@@ -40,18 +40,15 @@ function getInstagramPhotoList(token) {
     $.ajax({
       url: requestUrl,
       type: "GET",
-      data: {
-        distance: 5000,
-        
-      },
+      data: { distance: 5000 },
       dataType: 'jsonp',
       success: function(response) {
+
           response.data.forEach(function(data) {
             totalResults.push(data);
           });
-          console.log(totalResults);
           populateHTML(totalResults);
-          console.log(totalResults);
+
         } //end success callback
 
     }); // end ajax call
