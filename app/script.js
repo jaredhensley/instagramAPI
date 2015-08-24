@@ -31,7 +31,7 @@ function instagramAjaxCall(instagramToken) {
 
 
 function populateHTML(totalResults) {
-  //code here
+  lastCreat = totalResults[totalResults.length-1].created_time;
   console.log(totalResults);
   $.each(totalResults, function(index, value) {
     $(".results").append("<img src=" + value.images.thumbnail.url + ">" + " ");
@@ -40,7 +40,7 @@ function populateHTML(totalResults) {
 }
 
 
-function getInstagramPhotoList(token) {
+function getInstagramPhotoList(token, lastCreat) {
 
     /*var requestUrl = 'https://api.instagram.com/v1/users/self/media/liked' + '?' + instagramToken.value;*/
     var requestUrl = 'https://api.instagram.com/v1/media/search?lat=' + coords[0].G + '&lng=' + coords[0].K + '&' + token.value;
@@ -54,7 +54,7 @@ function getInstagramPhotoList(token) {
           response.data.forEach(function(data) {
             totalResults.push(data);
           });
-          lastCreat = response.data[response.data.length-1].created_time;
+          
           console.log(lastCreat);
           populateHTML(totalResults);
 
