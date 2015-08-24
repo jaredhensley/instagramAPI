@@ -40,7 +40,7 @@ function getInstagramPhotoList(token) {
     $.ajax({
       url: requestUrl,
       type: "GET",
-      data: { distance: 5000, count: 100 },
+      data: { distance: 5000, count: 100, max_timestamp: 1440356207 },
       dataType: 'jsonp',
       success: function(response) {
 
