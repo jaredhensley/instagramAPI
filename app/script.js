@@ -52,7 +52,7 @@ function getInstagramPhotoList(token) {
         } //end success callback
 
     }); // end ajax call
-
+    coords = [];
   } // end getInstagramPhotoList
 
 var map;
