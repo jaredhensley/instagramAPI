@@ -41,7 +41,7 @@ function getInstagramPhotoList(token) {
       url: requestUrl,
       type: "GET",
       data: {
-        DISTANCE: 5000,
+        distance: 5000,
         MAX_TIMESTAMP: 7
 
       },
