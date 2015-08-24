@@ -95,6 +95,7 @@ function geocodeAddress(geocoder, resultsMap) {
   });
   $("#address").val("");
   $(".results").html("");
+  totalResults = [];
 }
 
 $(document).ready(function() {
