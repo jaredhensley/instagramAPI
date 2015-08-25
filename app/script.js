@@ -1,6 +1,6 @@
 var totalResults = [];
-var map;
 var coords = [];
+var map;
 var lastCreat;
 var oldAddress;
 
@@ -41,18 +41,22 @@ function populateHTML(totalResults) {
   });
 }
 
+
 function clearResults () {
   $(".results").html("");
   totalResults = [];
 }
 
+
 function clearGeoSearch () {
   $("#address").val(""); 
 }
 
+
 function clearCoords () {
   coords = [];
 }
+
 
 function getInstagramPhotoList(token, lastCreat) {
 
@@ -97,17 +101,20 @@ function initMap() {
 }
 
 
+function checkIfNewAddress(address) {
+  if (address !== oldAddress) {
+    oldAddress = address;
+    lastCreat = null;
+  } else {
+    oldAddress = address;
+  }
+}
 
 
 function geocodeAddress(geocoder, resultsMap) {
   clearCoords();
   var address = document.getElementById('address').value;
-  if (address !== oldAddress) {
-  oldAddress = address;
-  lastCreat = null;
-} else {
-  oldAddress = address;
-}
+  checkIfNewAddress(address);
   geocoder.geocode({
     'address': address
   }, function(results, status) {
@@ -124,6 +131,7 @@ function geocodeAddress(geocoder, resultsMap) {
       alert('Geocode was not successful for the following reason: ' + status);
     }
   });
+  
   clearGeoSearch();
   clearResults();  
   
