@@ -15,7 +15,7 @@ function getInstagramAccessToken() {
   if (hash.indexOf("access_token") >= 0) {
     console.log('test');
     instagramToken = new AccessToken(hash);
-    instagramAjaxCall(instagramToken);
+    
   } else {
     console.log('no token');
     instagramToken = null;
@@ -24,10 +24,10 @@ function getInstagramAccessToken() {
 
 
 function instagramAjaxCall(instagramToken) {
-  $('.igbutton').on('click', function() {
+  /*$('.igbutton').on('click', function() {*/
     getInstagramPhotoList(instagramToken, lastCreat);
-  });
-}
+  }/*);*/
+/*}*/
 
 
 function populateHTML(totalResults) {
@@ -62,7 +62,7 @@ function getInstagramPhotoList(token, lastCreat) {
         } //end success callback
 
     }); // end ajax call
-    coords = [];
+    coords = []; //resetting coords array for next search
   } // end getInstagramPhotoList
 
 
@@ -78,7 +78,7 @@ function initMap() {
   var geocoder = new google.maps.Geocoder();
 
   document.getElementById('submit').addEventListener('click', function() {
-    geocodeAddress(geocoder, map);
+    geocodeAddress(geocoder, map);  //rework this
 
   });
 }
@@ -102,8 +102,9 @@ function geocodeAddress(geocoder, resultsMap) {
       alert('Geocode was not successful for the following reason: ' + status);
     }
   });
-  $("#address").val("");
+  $("#address").val("");  //make a general function
   $(".results").html("");
+  instagramAjaxCall(instagramToken);
   totalResults = [];
 }
 
