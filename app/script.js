@@ -17,6 +17,7 @@ function getInstagramAccessToken() {
     console.log('test');
     instagramToken = new AccessToken(hash);
     instagramAjaxCall(instagramToken);
+    $('.igbutton').trigger("click");
   } else {
     console.log('no token');
     instagramToken = null;
@@ -66,7 +67,7 @@ console.log(lastCreat);
     $.ajax({
       url: requestUrl,
       type: "GET",
-      data: { distance: 1000, count: 20, max_timestamp: lastCreat, min_timestamp: 0 }, 
+      data: { distance: 1000, count: 20, max_timestamp: lastCreat }, 
       dataType: 'jsonp',
       success: function(response) {
           console.log(response);
