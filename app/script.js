@@ -132,7 +132,7 @@ function geocodeAddress(geocoder, resultsMap) {
 
   clearGeoSearch();
   clearResults();  
-  
+  getInstagramAccessToken();
 }
 
 
