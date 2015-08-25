@@ -17,7 +17,7 @@ function getInstagramAccessToken() {
     console.log('test');
     instagramToken = new AccessToken(hash);
     instagramAjaxCall(instagramToken);
-    $('.igbutton').trigger("click");
+    
   } else {
     console.log('no token');
     instagramToken = null;
@@ -29,6 +29,7 @@ function instagramAjaxCall(instagramToken) {
   $('.igbutton').on('click', function() {
     getInstagramPhotoList(instagramToken, lastCreat);
   });
+  $('.igbutton').trigger("click");
 }
 
 
@@ -135,7 +136,7 @@ function geocodeAddress(geocoder, resultsMap) {
 
   clearGeoSearch();
   clearResults();  
-  
+  getInstagramAccessToken();
 }
 
 
