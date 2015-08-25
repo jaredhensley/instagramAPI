@@ -24,8 +24,7 @@ function getInstagramAccessToken() {
 
 
 function instagramAjaxCall(instagramToken) {
-  $('.igbutton').on('submit', function() {
-    event.preventDefault();
+  $('.igbutton').on('click', function() {
     getInstagramPhotoList(instagramToken, lastCreat);
   });
 }
@@ -91,8 +90,7 @@ function initMap() {
 
   var geocoder = new google.maps.Geocoder();
 
-  $('#submit').on('submit', function() {
-    event.preventDefault();
+  $('#submit').on('click', function() {
     geocodeAddress(geocoder, map);  //rework this
   });
 }

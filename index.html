@@ -16,7 +16,7 @@
 	<div class="center container">
 		<a href='https://instagram.com/oauth/authorize/?client_id=2a86eedc95bf44a691694851ae41161e&redirect_uri=https://jaredhensley.github.io/instagramAPI/&response_type=token'><button class="login">Instagram Login</button></a>  
 		<div id="panel">
-      <input id="address" type="textbox" value="Sydney, NSW">
+      <input id="address" type="textbox" value="Sydney, NSW" onkeydown = "if (event.keyCode == 13) document.getElementById('submit').click()">
       <input id="submit" type="button" value="Geocode">
     </div> <!-- end panel -->
 		<div id="map">
