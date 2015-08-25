@@ -17,7 +17,6 @@ function getInstagramAccessToken() {
     console.log('test');
     instagramToken = new AccessToken(hash);
     instagramAjaxCall(instagramToken);
-    
   } else {
     console.log('no token');
     instagramToken = null;
@@ -29,7 +28,6 @@ function instagramAjaxCall(instagramToken) {
   $('.igbutton').on('click', function() {
     getInstagramPhotoList(instagramToken, lastCreat);
   });
-  $('.igbutton').trigger("click");
 }
 
 
@@ -133,10 +131,10 @@ function geocodeAddress(geocoder, resultsMap) {
       alert('Geocode was not successful for the following reason: ' + status);
     }
   });
-
+  
   clearGeoSearch();
   clearResults();  
-  getInstagramAccessToken();
+  
 }
 
 
