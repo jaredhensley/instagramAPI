@@ -66,7 +66,7 @@ console.log(lastCreat);
     $.ajax({
       url: requestUrl,
       type: "GET",
-      data: { distance: 1000, count: 20, max_timestamp: lastCreat }, 
+      data: { distance: 1000, count: 20, max_timestamp: lastCreat, min_timestamp: 0 }, 
       dataType: 'jsonp',
       success: function(response) {
           console.log(response);
@@ -131,7 +131,7 @@ function geocodeAddress(geocoder, resultsMap) {
       alert('Geocode was not successful for the following reason: ' + status);
     }
   });
-  
+
   clearGeoSearch();
   clearResults();  
   
