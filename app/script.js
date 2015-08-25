@@ -40,9 +40,21 @@ function populateHTML(totalResults) {
   });
 }
 
+function clearResults () {
+  $(".results").html("");
+  totalResults = [];
+}
+
+function clearGeoSearch () {
+  $("#address").val(""); 
+}
+
+function clearCoords () {
+  coords = [];
+}
 
 function getInstagramPhotoList(token, lastCreat) {
-  lastCreat;
+
 console.log(lastCreat);
     /*var requestUrl = 'https://api.instagram.com/v1/users/self/media/liked' + '?' + instagramToken.value;*/
     var requestUrl = 'https://api.instagram.com/v1/media/search?lat=' + coords[0].G + '&lng=' + coords[0].K + '&' + token.value;
@@ -78,7 +90,7 @@ function initMap() {
 
   var geocoder = new google.maps.Geocoder();
 
-  document.getElementById('submit').addEventListener('click', function() {
+  $('#submit').on('click', function() {
     geocodeAddress(geocoder, map);  //rework this
 
   });
@@ -86,7 +98,7 @@ function initMap() {
 
 
 function geocodeAddress(geocoder, resultsMap) {
-  coords = [];
+  clearCoords();
   var address = document.getElementById('address').value;
   geocoder.geocode({
     'address': address
@@ -104,10 +116,9 @@ function geocodeAddress(geocoder, resultsMap) {
       alert('Geocode was not successful for the following reason: ' + status);
     }
   });
-  $("#address").val("");  //make a general function
-  $(".results").html("");
-  totalResults = [];
-
+  clearGeoSearch();
+  clearResults();  
+  
 }
 
 
