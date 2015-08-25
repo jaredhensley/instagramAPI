@@ -15,7 +15,7 @@ function getInstagramAccessToken() {
   if (hash.indexOf("access_token") >= 0) {
     console.log('test');
     instagramToken = new AccessToken(hash);
-    
+    instagramAjaxCall(instagramToken);
   } else {
     console.log('no token');
     instagramToken = null;
@@ -24,10 +24,10 @@ function getInstagramAccessToken() {
 
 
 function instagramAjaxCall(instagramToken) {
-  /*$('.igbutton').on('click', function() {*/
+  $('.igbutton').on('click', function() {
     getInstagramPhotoList(instagramToken, lastCreat);
-  }/*);*/
-/*}*/
+  });
+}
 
 
 function populateHTML(totalResults) {
@@ -104,7 +104,6 @@ function geocodeAddress(geocoder, resultsMap) {
   });
   $("#address").val("");  //make a general function
   $(".results").html("");
-  instagramAjaxCall(instagramToken);
   totalResults = [];
 }
 
