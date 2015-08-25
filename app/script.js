@@ -103,6 +103,7 @@ function geocodeAddress(geocoder, resultsMap) {
   clearCoords();
   var address = document.getElementById('address').value;
   if (address !== oldAddress) {
+  oldAddress = address;
   lastCreat = null;
 } else {
   oldAddress = address;
