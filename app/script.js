@@ -106,7 +106,7 @@ function geocodeAddress(geocoder, resultsMap) {
   $("#address").val("");  //make a general function
   $(".results").html("");
   totalResults = [];
-  lastCreat = null;
+  
 }
 
 
