@@ -24,7 +24,8 @@ function getInstagramAccessToken() {
 
 
 function instagramAjaxCall(instagramToken) {
-  $('.igbutton').on('click', function() {
+  $('.igbutton').on('submit', function() {
+    event.preventDefault();
     getInstagramPhotoList(instagramToken, lastCreat);
   });
 }
@@ -75,7 +76,7 @@ console.log(lastCreat);
         } //end success callback
 
     }); // end ajax call
-    coords = []; //resetting coords array for next search
+    clearCoords(); //resetting coords array for next search
   } // end getInstagramPhotoList
 
 
@@ -85,14 +86,14 @@ function initMap() {
       lat: -34.397,
       lng: 150.644
     },
-    zoom: 6
+    zoom: 9
   });
 
   var geocoder = new google.maps.Geocoder();
 
-  $('#submit').on('click', function() {
+  $('#submit').on('submit', function() {
+    event.preventDefault();
     geocodeAddress(geocoder, map);  //rework this
-
   });
 }
 
