@@ -32,7 +32,7 @@ function instagramAjaxCall(instagramToken) {
 
 function populateHTML(totalResults) {
   console.log(totalResults[totalResults.length-1].created_time);
-  lastCreat = (totalResults[totalResults.length-1].created_time) / 1000;
+  lastCreat = totalResults[totalResults.length-1].created_time;
   console.log(totalResults);
   $.each(totalResults, function(index, value) {
     $(".results").append("<img src=" + value.images.thumbnail.url + ">" + " ");
@@ -48,7 +48,7 @@ function getInstagramPhotoList(token, lastCreat) {
     $.ajax({
       url: requestUrl,
       type: "GET",
-      data: { distance: 1000, count: 20, max_timestamp: lastCreat }, 
+      data: { distance: 5000, count: 20, max_timestamp: lastCreat }, 
       dataType: 'jsonp',
       success: function(response) {
           console.log(response);
