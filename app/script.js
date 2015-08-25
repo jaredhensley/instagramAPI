@@ -2,6 +2,7 @@ var totalResults = [];
 var map;
 var coords = [];
 var lastCreat;
+var oldAddress;
 
 function AccessToken(value) {
   this.value = value;
@@ -96,9 +97,16 @@ function initMap() {
 }
 
 
+
+
 function geocodeAddress(geocoder, resultsMap) {
   clearCoords();
   var address = document.getElementById('address').value;
+  if (address !== oldAddress) {
+  lastCreat = null;
+} else {
+  oldAddress = address;
+}
   geocoder.geocode({
     'address': address
   }, function(results, status) {
