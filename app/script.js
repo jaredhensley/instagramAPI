@@ -25,10 +25,8 @@ function getInstagramAccessToken() {
 
 
 function instagramAjaxCall(instagramToken) {
-  $('.igbutton').on('click', function() {
     getInstagramPhotoList(instagramToken, lastCreat);
-  });
-}
+  }
 
 
 function populateHTML(totalResults) {
@@ -131,7 +129,7 @@ function geocodeAddress(geocoder, resultsMap) {
       alert('Geocode was not successful for the following reason: ' + status);
     }
   });
-  
+
   clearGeoSearch();
   clearResults();  
   
