@@ -42,6 +42,7 @@ function populateHTML(totalResults) {
 
 
 function getInstagramPhotoList(token, lastCreat) {
+  lastCreat;
 console.log(lastCreat);
     /*var requestUrl = 'https://api.instagram.com/v1/users/self/media/liked' + '?' + instagramToken.value;*/
     var requestUrl = 'https://api.instagram.com/v1/media/search?lat=' + coords[0].G + '&lng=' + coords[0].K + '&' + token.value;
@@ -106,7 +107,7 @@ function geocodeAddress(geocoder, resultsMap) {
   $("#address").val("");  //make a general function
   $(".results").html("");
   totalResults = [];
-  
+
 }
 
 
