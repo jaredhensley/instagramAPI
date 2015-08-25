@@ -85,6 +85,7 @@ function initMap() {
 
 
 function geocodeAddress(geocoder, resultsMap) {
+  coords = [];
   var address = document.getElementById('address').value;
   geocoder.geocode({
     'address': address
