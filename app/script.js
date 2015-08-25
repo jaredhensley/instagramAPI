@@ -31,7 +31,7 @@ function instagramAjaxCall(instagramToken) {
 
 
 function populateHTML(totalResults) {
-  console.log(totalResults[totalResults.length-1].created_time);
+ /* console.log(totalResults[totalResults.length-1].created_time);*/
   lastCreat = totalResults[totalResults.length-1].created_time;
   console.log(totalResults);
   $.each(totalResults, function(index, value) {
