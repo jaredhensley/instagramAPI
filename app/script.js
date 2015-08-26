@@ -4,7 +4,7 @@ var map;
 var lastCreat;
 var oldAddress;
 var instagramToken;
-
+var geocoder;
 function AccessToken(value) {
   this.value = value;
 }
