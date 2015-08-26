@@ -63,6 +63,7 @@ function getInstagramPhotoList(token, lastCreat) {
 
 console.log(lastCreat);
     /*var requestUrl = 'https://api.instagram.com/v1/users/self/media/liked' + '?' + instagramToken.value;*/
+    geocodeAddress(geocoder, map);
     var requestUrl = 'https://api.instagram.com/v1/media/search?lat=' + coords[0].G + '&lng=' + coords[0].K + '&' + token.value;
     $.ajax({
       url: requestUrl,
@@ -95,7 +96,7 @@ function initMap() {
     zoom: 9
   });
 
-  var geocoder = new google.maps.Geocoder();
+  geocoder = new google.maps.Geocoder();
 
   $('#submit').on('click', function() {
     geocodeAddress(geocoder, map);  //rework this
