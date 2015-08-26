@@ -3,6 +3,7 @@ var coords = [];
 var map;
 var lastCreat;
 var oldAddress;
+var instagramToken;
 
 function AccessToken(value) {
   this.value = value;
