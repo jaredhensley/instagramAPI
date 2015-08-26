@@ -85,6 +85,8 @@ console.log(lastCreat);
 
 
 function initMap() {
+  coords[0].G = -34.397;
+  coords[0].K = 150.644;
   map = new google.maps.Map(document.getElementById('map'), {
     center: {
       lat: -34.397,
