@@ -4,7 +4,7 @@ var map;
 var lastCreat;
 var oldAddress;
 var instagramToken;
-var geocoder;
+
 function AccessToken(value) {
   this.value = value;
 }
@@ -63,7 +63,6 @@ function getInstagramPhotoList(token, lastCreat) {
 
 console.log(lastCreat);
     /*var requestUrl = 'https://api.instagram.com/v1/users/self/media/liked' + '?' + instagramToken.value;*/
-    geocodeAddress(geocoder, map);
     var requestUrl = 'https://api.instagram.com/v1/media/search?lat=' + coords[0].G + '&lng=' + coords[0].K + '&' + token.value;
     $.ajax({
       url: requestUrl,
@@ -96,7 +95,7 @@ function initMap() {
     zoom: 9
   });
 
-  geocoder = new google.maps.Geocoder();
+  var geocoder = new google.maps.Geocoder();
 
   $('#submit').on('click', function() {
     geocodeAddress(geocoder, map);  //rework this
@@ -122,9 +121,7 @@ function geocodeAddress(geocoder, resultsMap) {
     'address': address
   }, function(results, status) {
     console.log(results);
-    console.log('DOGS');
     if (status === google.maps.GeocoderStatus.OK) {
-      console.log('CATS');
       resultsMap.setCenter(results[0].geometry.location);
       coords.push(results[0].geometry.location);
       console.log(coords);
@@ -144,10 +141,6 @@ function geocodeAddress(geocoder, resultsMap) {
 
 
 $(document).ready(function() {
-/*  coords[0] = "";
-  coords[0].G = -34.397;
-  coords[0].K = 150.644;
-  console.log(coords[0])*/;
   if (location.hash.indexOf("access_token") > 0 ) {
     console.log(location.hash.indexOf("access_token"));
     getInstagramAccessToken();
