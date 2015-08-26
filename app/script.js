@@ -141,5 +141,5 @@ function geocodeAddress(geocoder, resultsMap) {
 $(document).ready(function() {
 
   getInstagramAccessToken();
-
+  
 });
