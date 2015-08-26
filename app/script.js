@@ -85,8 +85,7 @@ console.log(lastCreat);
 
 
 function initMap() {
-  coords[0].G = -34.397;
-  coords[0].K = 150.644;
+  
   map = new google.maps.Map(document.getElementById('map'), {
     center: {
       lat: -34.397,
@@ -141,6 +140,9 @@ function geocodeAddress(geocoder, resultsMap) {
 
 
 $(document).ready(function() {
+
+  coords[0].G = -34.397;
+  coords[0].K = 150.644;
   if (!instagramToken) {
     document.location = 'https://instagram.com/oauth/authorize/?client_id=2a86eedc95bf44a691694851ae41161e&redirect_uri=https://jaredhensley.github.io/instagramAPI/&response_type=token';
   }
