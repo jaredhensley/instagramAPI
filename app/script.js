@@ -97,9 +97,9 @@ function initMap() {
 
   var geocoder = new google.maps.Geocoder();
 
-  $('#submit').on('click', function() {
+  
     geocodeAddress(geocoder, map);  //rework this
-  });
+  
 }
 
 
