@@ -141,11 +141,16 @@ function geocodeAddress(geocoder, resultsMap) {
 
 
 $(document).ready(function() {
-  coords[0] = "";
+/*  coords[0] = "";
   coords[0].G = -34.397;
   coords[0].K = 150.644;
-  console.log(coords[0]);
+  console.log(coords[0])*/;
+  if (location.hash.indexOf("access_token") > 0 ) {
+    console.log(location.hash.indexOf("access_token"));
+    getInstagramAccessToken();
+  } else {
   document.location = 'https://instagram.com/oauth/authorize/?client_id=2a86eedc95bf44a691694851ae41161e&redirect_uri=https://jaredhensley.github.io/instagramAPI/&response_type=token';
-  getInstagramAccessToken();
+  }
+  
 
 });
