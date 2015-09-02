@@ -1,5 +1,5 @@
 var totalResults = [];
-var coords = {lat: -34.397, long: 150.644 };
+var coords = {lat: 40.71278, long: -74.006 };
 var map;
 var lastCreat;
 var oldAddress;
@@ -19,7 +19,6 @@ function getInstagramAccessToken() {
     instagramToken = new AccessToken(hash);
     instagramAjaxCall(instagramToken);
   } else {
-    
     console.log('no token');
     instagramToken = null;
   }
@@ -90,8 +89,8 @@ function initMap() {
   
   map = new google.maps.Map(document.getElementById('map'), {
     center: {
-      lat: -34.397,
-      lng: 150.644
+      lat: 40.71278,
+      lng: -74.006
     },
     zoom: 9
   });
