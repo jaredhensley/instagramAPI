@@ -27,8 +27,9 @@ function getInstagramAccessToken() {
 
 
 function instagramAjaxCall(instagramToken) {
-
+  $('.igbutton').on('click', function() {
     getInstagramPhotoList(instagramToken, lastCreat);
+  });
 }
 
 
