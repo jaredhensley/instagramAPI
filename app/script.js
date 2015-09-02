@@ -123,7 +123,8 @@ function geocodeAddress(geocoder, resultsMap) {
     console.log(results);
     if (status === google.maps.GeocoderStatus.OK) {
       resultsMap.setCenter(results[0].geometry.location);
-      coords.push(results[0].geometry.location);
+      coords.lat = (results[0].geometry.location.G);
+      coords.long = (results[0].geometry.location.K);
       console.log(coords);
       var marker = new google.maps.Marker({
         map: resultsMap,
