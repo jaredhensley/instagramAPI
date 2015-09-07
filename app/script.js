@@ -43,7 +43,7 @@ function clearCoords () {
 
 
 function getInstagramPhotoList(token, lastCreat) {
-
+  console.log(coords);
   console.log(lastCreat);
   var requestUrl = 'https://api.instagram.com/v1/media/search?lat=' + coords['lat'] + '&lng=' + coords['long'] + '&' + token;
   $.ajax({
@@ -82,6 +82,7 @@ function initMap() {
 
   $('#submit').on('click', function() {
     geocodeAddress(geocoder, map); 
+    console.log(coords);
     getInstagramAccessToken();
   });
 }
