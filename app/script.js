@@ -3,31 +3,26 @@ var coords = {lat: 40.71278, long: -74.006 };
 var map;
 var lastCreat;
 var oldAddress;
-var instagramToken;
-
-function AccessToken(value) {
-  this.value = value;
-}
+var token;
 
 
 function getInstagramAccessToken() {
 
-  var hash = location.hash.replace('#', '');
+  var token = location.hash.replace('#', '');
 
   if (hash.indexOf("access_token") >= 0) {
     console.log('test');
-    instagramToken = new AccessToken(hash);
-    instagramAjaxCall(instagramToken);
+    instagramAjaxCall(token);
   } else {
     console.log('no token');
-    instagramToken = null;
+    token = null;
   }
 }
 
 
-function instagramAjaxCall(instagramToken) {
+function instagramAjaxCall(token) {
   $('.igbutton').on('click', function() {
-    getInstagramPhotoList(instagramToken, lastCreat);
+    getInstagramPhotoList(token, lastCreat);
   });
 }
 
@@ -63,7 +58,7 @@ function getInstagramPhotoList(token, lastCreat) {
 
 console.log(lastCreat);
     /*var requestUrl = 'https://api.instagram.com/v1/users/self/media/liked' + '?' + instagramToken.value;*/
-    var requestUrl = 'https://api.instagram.com/v1/media/search?lat=' + coords['lat'] + '&lng=' + coords['long'] + '&' + token.value;
+    var requestUrl = 'https://api.instagram.com/v1/media/search?lat=' + coords['lat'] + '&lng=' + coords['long'] + '&' + token;
     $.ajax({
       url: requestUrl,
       type: "GET",
