@@ -52,6 +52,7 @@ function getInstagramPhotoList(token, lastCreat) {
     data: { distance: 1000, count: 20, max_timestamp: lastCreat }, 
     dataType: 'jsonp',
     success: function(response) {
+      console.log(requestUrl);
       console.log(response);
       response.data.forEach(function(data) {
       totalResults.push(data);
