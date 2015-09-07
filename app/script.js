@@ -11,7 +11,7 @@ function getInstagramAccessToken() {
   var token = location.hash.replace('#', '');
 
   if (token.indexOf("access_token") >= 0) {
-    getInstagramPhotoList(token, lastCreat);
+    getInstagramPhotoList(token, lastCreat, coords);
   } else {
     token = null;
   }
@@ -42,7 +42,7 @@ function clearCoords () {
 }
 
 
-function getInstagramPhotoList(token, lastCreat) {
+function getInstagramPhotoList(token, lastCreat, coords) {
   console.log(coords);
   console.log(lastCreat);
   var requestUrl = 'https://api.instagram.com/v1/media/search?lat=' + coords['lat'] + '&lng=' + coords['long'] + '&' + token;
