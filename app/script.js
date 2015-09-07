@@ -11,29 +11,17 @@ function getInstagramAccessToken() {
   var token = location.hash.replace('#', '');
 
   if (token.indexOf("access_token") >= 0) {
-    console.log('test');
-    instagramAjaxCall(token);
+    getInstagramPhotoList(token, lastCreat);
   } else {
-    console.log('no token');
     token = null;
   }
 }
 
-
-function instagramAjaxCall(token) {
-  $('.igbutton').on('click', function() {
-    getInstagramPhotoList(token, lastCreat);
-  });
-}
-
-
 function populateHTML(totalResults) {
- /* console.log(totalResults[totalResults.length-1].created_time);*/
   lastCreat = totalResults[totalResults.length-1].created_time;
   console.log(totalResults);
   $.each(totalResults, function(index, value) {
     $(".results").append("<img src=" + value.images.thumbnail.url + ">" + " ");
-
   });
 }
 
@@ -56,28 +44,27 @@ function clearCoords () {
 
 function getInstagramPhotoList(token, lastCreat) {
 
-console.log(lastCreat);
-    /*var requestUrl = 'https://api.instagram.com/v1/users/self/media/liked' + '?' + instagramToken.value;*/
-    var requestUrl = 'https://api.instagram.com/v1/media/search?lat=' + coords['lat'] + '&lng=' + coords['long'] + '&' + token;
-    $.ajax({
-      url: requestUrl,
-      type: "GET",
-      data: { distance: 1000, count: 20, max_timestamp: lastCreat }, 
-      dataType: 'jsonp',
-      success: function(response) {
-          console.log(response);
-          response.data.forEach(function(data) {
-            totalResults.push(data);
-          });
+  console.log(lastCreat);
+  var requestUrl = 'https://api.instagram.com/v1/media/search?lat=' + coords['lat'] + '&lng=' + coords['long'] + '&' + token;
+  $.ajax({
+    url: requestUrl,
+    type: "GET",
+    data: { distance: 1000, count: 20, max_timestamp: lastCreat }, 
+    dataType: 'jsonp',
+    success: function(response) {
+      console.log(response);
+      response.data.forEach(function(data) {
+      totalResults.push(data);
+      });
           
-          console.log(lastCreat);
-          populateHTML(totalResults);
+      console.log(lastCreat);
+      populateHTML(totalResults);
 
-        } //end success callback
+    } //end success callback
 
-    }); // end ajax call
-    clearCoords(); //resetting coords array for next search
-  } // end getInstagramPhotoList
+  }); // end ajax call
+  clearCoords(); //resetting coords array for next search
+} // end getInstagramPhotoList
 
 
 function initMap() {
@@ -93,7 +80,7 @@ function initMap() {
   var geocoder = new google.maps.Geocoder();
 
   $('#submit').on('click', function() {
-    geocodeAddress(geocoder, map);  //rework this
+    geocodeAddress(geocoder, map);  
   });
 }
 
