@@ -10,7 +10,7 @@ function getInstagramAccessToken() {
 
   var token = location.hash.replace('#', '');
 
-  if (hash.indexOf("access_token") >= 0) {
+  if (token.indexOf("access_token") >= 0) {
     console.log('test');
     instagramAjaxCall(token);
   } else {
