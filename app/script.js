@@ -81,7 +81,7 @@ function initMap() {
 
   $('#submit').on('click', function() {
     geocodeAddress(geocoder, map); 
-    getInstagramPhotoList(token, lastCreat); 
+    getInstagramAccessToken();
   });
 }
 
