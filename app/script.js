@@ -84,6 +84,7 @@ function initMap() {
     geocodeAddress(geocoder, map); 
     console.log(coords);
     getInstagramAccessToken();
+    console.log(coords);
   });
 }
 
