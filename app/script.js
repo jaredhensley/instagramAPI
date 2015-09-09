@@ -12,6 +12,7 @@ function getInstagramAccessToken() {
 
   if (token.indexOf("access_token") >= 0) {
     getInstagramPhotoList(token, lastCreat, coords);
+    console.log(coords);
   } else {
     token = null;
   }
@@ -64,7 +65,7 @@ function getInstagramPhotoList(token, lastCreat, coords) {
     } //end success callback
 
   }); // end ajax call
-  clearCoords(); //resetting coords array for next search
+  clearCoords(); // resetting coords array for next search
 } // end getInstagramPhotoList
 
 
