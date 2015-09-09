@@ -53,7 +53,7 @@ function getInstagramPhotoList(token, lastCreat, coords) {
     data: { distance: 1000, count: 20, max_timestamp: lastCreat }, 
     dataType: 'jsonp',
     success: function(response) {
-      console.log(requestUrl);
+      console.log('RequestURL from success call: ', requestUrl);
       console.log(response);
       response.data.forEach(function(data) {
       totalResults.push(data);
@@ -81,7 +81,7 @@ function initMap() {
 
   var geocoder = new google.maps.Geocoder();
 
-  $('#submit').on('click', function() {
+  $('#submit').on('submit', function() {
     geocodeAddress(geocoder, map); 
   });
 }
