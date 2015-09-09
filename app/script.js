@@ -117,6 +117,7 @@ function geocodeAddress(geocoder, resultsMap) {
         map: resultsMap,
         position: results[0].geometry.location
       });
+       getInstagramAccessToken()
     } else {
       alert('Geocode was not successful for the following reason: ' + status);
     }
