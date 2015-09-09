@@ -81,7 +81,7 @@ function initMap() {
 
   var geocoder = new google.maps.Geocoder();
 
-  $('#submit').on('submit', function() {
+  $('#submit').on('submit click', function() {
     geocodeAddress(geocoder, map); 
   });
 }
