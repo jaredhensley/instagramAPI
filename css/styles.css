@@ -1,12 +1,23 @@
+/* -------------------------------------- */
+/* BASIC SETUP */
+/* -------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-	margin: 0;
 	background-color: #E8EAD5;
 }
 
+/* -------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* -------------------------------------- */
+
 .center {
 	margin: 0 auto;
-	
 }
 
 .container {
@@ -20,6 +31,10 @@ body {
 	height: 2em;
   /* display: none; */
 }
+
+/* -------------------------------------- */
+/* MAP STYLES */
+/* -------------------------------------- */
 
 #map {
 	height: 400px;
@@ -55,6 +70,10 @@ body {
   font-size: 12px;
 }
 
+/* -------------------------------------- */
+/* RESULTS STYLES */
+/* -------------------------------------- */
+
 .results {
 	height: 100%;
 }
@@ -67,4 +86,13 @@ body {
 .left {
   float: left;
 
+}
+
+/* -------------------------------------- */
+/* TITLES */
+/* -------------------------------------- */
+
+.title {
+  font-family: 'lato', 'Arial', sans-serif;
+  text-rendering: optimizeLegibility;
 }
