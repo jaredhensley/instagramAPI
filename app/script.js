@@ -22,7 +22,8 @@ function populateHTML(totalResults) {
   lastCreat = totalResults[totalResults.length-1].created_time;
   console.log(totalResults);
   $.each(totalResults, function(index, value) {
-    if (value.video) {
+    if (value.videos) {
+      console.log(value.videos);
       $(".results").append("<video width='240' height='240' controls><source src=" + value.videos.low_resolution.url + " type='video/mp4'> </video>" + " ");
     } else {
       $(".results").append("<img src=" + value.images.thumbnail.url + ">" + " ");
