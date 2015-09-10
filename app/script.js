@@ -12,7 +12,6 @@ function getInstagramAccessToken() {
 
   if (token.indexOf("access_token") >= 0) {
     getInstagramPhotoList(token, lastCreat, coords);
-    console.log(coords);
   } else {
     token = null;
   }
@@ -20,10 +19,8 @@ function getInstagramAccessToken() {
 
 function populateHTML(totalResults) {
   lastCreat = totalResults[totalResults.length-1].created_time;
-  console.log(totalResults);
   $.each(totalResults, function(index, value) {
     if (value.videos) {
-      console.log(value.videos);
       $(".results").append("<a href=" + value.videos.low_resolution.url + "><video width='24%' height='32%' controls><source src=" + value.videos.low_resolution.url + " type='video/mp4'> </video> </a>");
     } else {
       $(".results").append("<a href="+value.images.standard_resolution.url +"><img height='32%' width='24%' src=" + value.images.standard_resolution.url + ">" + "</a>");
@@ -49,8 +46,6 @@ function clearCoords () {
 
 
 function getInstagramPhotoList(token, lastCreat, coords) {
-  console.log(coords);
-  console.log(lastCreat);
   var requestUrl = 'https://api.instagram.com/v1/media/search?lat=' + coords['lat'] + '&lng=' + coords['long'] + '&' + token;
   $.ajax({
     url: requestUrl,
@@ -58,13 +53,12 @@ function getInstagramPhotoList(token, lastCreat, coords) {
     data: { distance: 1000, count: 20, max_timestamp: lastCreat }, 
     dataType: 'jsonp',
     success: function(response) {
-      console.log('RequestURL from success call: ', requestUrl);
-      console.log(response);
+     /* console.log('RequestURL from success call: ', requestUrl);
+      console.log(response);*/
       response.data.forEach(function(data) {
       totalResults.push(data);
       });
           
-      console.log(lastCreat);
       populateHTML(totalResults);
 
     } //end success callback
@@ -109,12 +103,10 @@ function geocodeAddress(geocoder, resultsMap) {
   geocoder.geocode({
     'address': address
   }, function(results, status) {
-    console.log(results);
     if (status === google.maps.GeocoderStatus.OK) {
       resultsMap.setCenter(results[0].geometry.location);
       coords.lat = (results[0].geometry.location.G);
       coords.long = (results[0].geometry.location.K);
-      console.log(coords);
       var marker = new google.maps.Marker({
         map: resultsMap,
         position: results[0].geometry.location
@@ -133,7 +125,6 @@ function geocodeAddress(geocoder, resultsMap) {
 
 $(document).ready(function() {
   if (location.hash.indexOf("access_token") > 0 ) {
-    console.log(location.hash.indexOf("access_token"));
     getInstagramAccessToken();
   } else {
   document.location = 'https://instagram.com/oauth/authorize/?client_id=2a86eedc95bf44a691694851ae41161e&redirect_uri=https://jaredhensley.github.io/instagramAPI/&response_type=token';
