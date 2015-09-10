@@ -24,9 +24,9 @@ function populateHTML(totalResults) {
   $.each(totalResults, function(index, value) {
     if (value.videos) {
       console.log(value.videos);
-      $(".results").append("<a href=" + value.videos.low_resolution.url + "><video width='240' height='240' controls><source src=" + value.videos.low_resolution.url + " type='video/mp4'> </video> </a>" + " ");
+      $(".results").append("<a href=" + value.videos.low_resolution.url + "><video width='240' height='240' controls><source src=" + value.videos.low_resolution.url + " type='video/mp4'> </video> </a>");
     } else {
-      $(".results").append("<a href="+value.images.thumbnail.url +"><img src=" + value.images.thumbnail.url + ">" + "</a>" + " ");
+      $(".results").append("<a href="+value.images.thumbnail.url +"><img src=" + value.images.thumbnail.url + ">" + "</a>");
     }
   });
 }
