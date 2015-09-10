@@ -83,3 +83,12 @@ body {
   color: #5d5d5d;
   font-size: 1.8em;
 }
+
+/* -------------------------------------- */
+/* RESULTS STYLES */
+/* -------------------------------------- */
+
+a {
+  border: 1px solid black;
+  padding: 1px;
+}
