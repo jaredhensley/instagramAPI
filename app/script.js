@@ -22,7 +22,9 @@ function populateHTML(totalResults) {
   lastCreat = totalResults[totalResults.length-1].created_time;
   console.log(totalResults);
   $.each(totalResults, function(index, value) {
-    $(".results").append("<img src=" + value.images.thumbnail.url + ">" + " ");
+    if (value.video) {
+    $(".results").append("<img src=" + value.video.low_resolution.url + ">" + " ");
+  }
   });
 }
 
@@ -81,7 +83,7 @@ function initMap() {
 
   var geocoder = new google.maps.Geocoder();
 
-  $('#submit').on('submit click', function() {
+  $('#submit').on('keydown click', function() {
     geocodeAddress(geocoder, map); 
   });
 }
