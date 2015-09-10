@@ -22,8 +22,8 @@ function populateHTML(totalResults) {
   lastCreat = totalResults[totalResults.length-1].created_time;
   console.log(totalResults);
   $.each(totalResults, function(index, value) {
-    if (value.video) {
-    $(".results").append("<img src=" + value.video.low_resolution.url + ">" + " ");
+    if (value.videos) {
+    $(".results").append("<img src=" + value.videos.low_resolution.url + ">" + " ");
   }
   });
 }
