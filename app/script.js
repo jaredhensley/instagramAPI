@@ -26,7 +26,7 @@ function populateHTML(totalResults) {
       console.log(value.videos);
       $(".results").append("<a href=" + value.videos.low_resolution.url + "><video width='640' height='640' controls><source src=" + value.videos.low_resolution.url + " type='video/mp4'> </video> </a>");
     } else {
-      $(".results").append("<a href="+value.images.standard_resolution.url +"><img src=" + value.images.thumbnail.url + ">" + "</a>");
+      $(".results").append("<a href="+value.images.standard_resolution.url +"><img src=" + value.images.standard_resolution.url + ">" + "</a>");
     }
   });
 }
