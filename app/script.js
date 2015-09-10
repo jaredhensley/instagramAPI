@@ -23,7 +23,7 @@ function populateHTML(totalResults) {
   console.log(totalResults);
   $.each(totalResults, function(index, value) {
     if (value.videos) {
-    $(".results").append("<video width="140" height="140" controls><source src=" + value.videos.low_resolution.url + "type='video/mp4'> </video>" + " ");
+    $(".results video").append("<source src=" + value.videos.low_resolution.url + ">" + " ");
   }
   });
 }
