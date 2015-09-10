@@ -58,3 +58,8 @@ body {
 .results {
 	height: 100%;
 }
+
+.right {
+  float: right;
+
+}
