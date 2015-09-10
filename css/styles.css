@@ -9,7 +9,7 @@
 }
 
 body {
-	background-color: #E8EAD5;
+	background-color: #fff;
 }
 
 /* -------------------------------------- */
@@ -88,7 +88,7 @@ body {
 /* RESULTS STYLES */
 /* -------------------------------------- */
 
-a {
-  border: 1px solid black;
-  padding: 1px;
+img {
+  border: 1px solid #5d5d5d;
+  padding: 20px;
 }
