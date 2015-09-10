@@ -26,7 +26,7 @@ function populateHTML(totalResults) {
       console.log(value.videos);
       $(".results").append("<a href=" + value.videos.low_resolution.url + "><video width='24%' height='32%' controls><source src=" + value.videos.low_resolution.url + " type='video/mp4'> </video> </a>");
     } else {
-      $(".results").append("<a href="+value.images.standard_resolution.url +"><img height='300' width='300' src=" + value.images.standard_resolution.url + ">" + "</a>");
+      $(".results").append("<a href="+value.images.standard_resolution.url +"><img height='32%' width='24%' src=" + value.images.standard_resolution.url + ">" + "</a>");
     }
   });
 }
