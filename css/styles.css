@@ -20,11 +20,6 @@ body {
 	margin: 0 auto;
 }
 
-.container {
-	width: 70%;
-	background-color: #BAB65B;
-}
-
 .login {
 	margin-top: 0 auto;
 	border-radius: 10px;
@@ -37,7 +32,7 @@ body {
 /* -------------------------------------- */
 
 #map {
-	height: 400px;
+	height: auto;
 	width: 81.5%;
 }
 
