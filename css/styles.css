@@ -33,7 +33,7 @@ body {
 
 #map {
 	height: 400px;
-	width: 81.5%;
+	width: auto;
 }
 
 #panel {
