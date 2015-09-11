@@ -85,6 +85,7 @@ body {
 img, video {
   border: 1px solid #5d5d5d;
   padding: 1%;
+  margin: .25%;
 }
 
 a {
