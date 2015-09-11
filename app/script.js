@@ -75,7 +75,7 @@ function initMap() {
       lat: 40.71278,
       lng: -74.006
     },
-    zoom: 9
+    zoom:  11
   });
 
   var geocoder = new google.maps.Geocoder();
