@@ -31,6 +31,20 @@ body {
 /* MAP STYLES */
 /* -------------------------------------- */
 
+.location-canvas-container {
+  height: 0;
+  padding-bottom: 65%;
+
+}
+
+.location-canvas {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
 .map-container {
 position: relative;
 padding-bottom: 26.25%;
