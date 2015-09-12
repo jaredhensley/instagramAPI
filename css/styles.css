@@ -20,22 +20,9 @@ body {
 	margin: 0 auto;
 }
 
-.login {
-	margin-top: 0 auto;
-	border-radius: 10px;
-	height: 2em;
-  /* display: none; */
-}
-
 /* -------------------------------------- */
 /* MAP STYLES */
 /* -------------------------------------- */
-
-.location-canvas-container {
-  height: 0;
-  padding-bottom: 65%;
-  position: relative;
-}
 
 #location-canvas {
   position: absolute;
@@ -59,18 +46,16 @@ overflow: hidden;
 position: absolute;
 top: 0;
 left: 0;
-width: 100%;
+max-width: 100%;
 height: 100%;
 }
 
 #panel {
   text-align: center;
-  z-index: 5;
   background-color: #fff;
   padding: 5px;
   border: 1px solid #999;
   text-align: center;
-  width: 81.5%;
 }
 
 /* -------------------------------------- */
