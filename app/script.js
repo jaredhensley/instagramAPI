@@ -81,10 +81,12 @@ function initMap() {
   $('#submit').on('keydown click', function() {
     geocodeAddress(geocoder, map); 
   });
+
+  google.maps.event.addDomListener(window, 'resize', initialize);
+  google.maps.event.addDomListener(window, 'load', initialize);
 }
 
-google.maps.event.addDomListener(window, 'resize', initialize);
-google.maps.event.addDomListener(window, 'load', initialize);
+
 
 function checkIfNewAddress(address) {
   if (address !== oldAddress) {
