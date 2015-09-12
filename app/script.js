@@ -82,8 +82,8 @@ function initMap() {
     geocodeAddress(geocoder, map); 
   });
 
-  google.maps.event.addDomListener(window, 'resize', initialize);
-  google.maps.event.addDomListener(window, 'load', initialize);
+  google.maps.event.addDomListener(window, 'resize', initMap);
+  google.maps.event.addDomListener(window, 'load', initMap);
 }
 
 
