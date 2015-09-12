@@ -43,9 +43,9 @@ function populateHTML(totalResults) {
   lastCreat = totalResults[totalResults.length-1].created_time;
   $.each(totalResults, function(index, value) {
     if (value.videos) {
-      $(".results").append("<a href=" + value.videos.low_resolution.url + "><video width='24.75%' height='32%' controls><source src=" + value.videos.low_resolution.url + " type='video/mp4'> </video> </a>");
+      $(".results").append("<a href=" + value.videos.low_resolution.url + "><video width='24.25%' height='32%' controls><source src=" + value.videos.low_resolution.url + " type='video/mp4'> </video> </a>");
     } else {
-      $(".results").append("<a href="+value.images.standard_resolution.url +"><img height='32%' width='24.75%' src=" + value.images.standard_resolution.url + ">" + "</a>");
+      $(".results").append("<a href="+value.images.standard_resolution.url +"><img height='32%' width='24.25%' src=" + value.images.standard_resolution.url + ">" + "</a>");
     }
   });
 }
