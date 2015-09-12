@@ -45,7 +45,7 @@ function populateHTML(totalResults) {
     if (value.videos) {
       $(".results").append("<a href=" + value.videos.low_resolution.url + "><video width='25%' height='32%' controls><source src=" + value.videos.low_resolution.url + " type='video/mp4'> </video> </a>");
     } else {
-      $(".results").append("<a href="+value.images.standard_resolution.url +"><img height='32%' width='24%' src=" + value.images.standard_resolution.url + ">" + "</a>");
+      $(".results").append("<a href="+value.images.standard_resolution.url +"><img height='32%' width='25%' src=" + value.images.standard_resolution.url + ">" + "</a>");
     }
   });
 }
