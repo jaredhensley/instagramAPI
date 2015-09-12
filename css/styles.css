@@ -37,7 +37,7 @@ body {
 
 }
 
-.location-canvas {
+#location-canvas {
   position: absolute;
   left: 0;
   right: 0;
