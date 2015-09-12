@@ -83,7 +83,6 @@ function initMap() {
   });
 
   google.maps.event.addDomListener(window, 'resize', initMap);
-  google.maps.event.addDomListener(window, 'load', initMap);
 }
 
 
