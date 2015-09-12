@@ -53,8 +53,6 @@ function getInstagramPhotoList(token, lastCreat, coords) {
     data: { distance: 1000, count: 20, max_timestamp: lastCreat }, 
     dataType: 'jsonp',
     success: function(response) {
-     /* console.log('RequestURL from success call: ', requestUrl);
-      console.log(response);*/
       response.data.forEach(function(data) {
       totalResults.push(data);
       });
@@ -70,7 +68,7 @@ function getInstagramPhotoList(token, lastCreat, coords) {
 
 function initMap() {
   
-  map = new google.maps.Map(document.getElementById('map'), {
+  map = new google.maps.Map(document.getElementById('location-canvas'), {
     center: {
       lat: 40.71278,
       lng: -74.006
@@ -85,6 +83,8 @@ function initMap() {
   });
 }
 
+google.maps.event.addDomListener(window, 'resize', initialize);
+google.maps.event.addDomListener(window, 'load', initialize);
 
 function checkIfNewAddress(address) {
   if (address !== oldAddress) {
