@@ -131,4 +131,10 @@ a {
    height: 32%;
 }
 
+figure {
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+
 
