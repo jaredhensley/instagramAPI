@@ -53,9 +53,9 @@ body {
   background-color: #fff;
   padding: 5px;
   text-align: center;
-  width: 25%;
   margin: 0 auto;
 }
+
 
 .ion-eye {
   font-size: 400%;
@@ -66,6 +66,7 @@ body {
 #address {
   padding: 6px;
   border-radius: 10px;
+  width: 25%;
 }
 
 /* -------------------------------------- */
