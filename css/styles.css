@@ -22,12 +22,37 @@ body {
 }
 
 /* -------------------------------------- */
+/* TITLES */
+/* -------------------------------------- */
+
+.title, .author {
+  font-family: 'lato', 'Arial', sans-serif;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #5d5d5d;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.7em;
+  margin-bottom: .5em;
+}
+
+.author {
+  font-size: 1.8em;
+  margin-bottom: 0px;
+}
+
+/* -------------------------------------- */
 /* MAP STYLES */
 /* -------------------------------------- */
 
 #location-canvas {
   width:100%;
   height:300px;
+  margin-bottom: 1em;
 }
 
 .map-container {
@@ -48,6 +73,10 @@ body {
   height: 100%;
 }
 
+/* -------------------------------------- */
+/* SEARCH STYLES */
+/* -------------------------------------- */
+
 #panel {
   text-align: center;
   background-color: #fff;
@@ -61,6 +90,7 @@ body {
   font-size: 400%;
   text-align: center;
   vertical-align: middle;
+  cursor: pointer;
 }
 
 #address {
@@ -87,29 +117,6 @@ body {
 
 }
 
-/* -------------------------------------- */
-/* TITLES */
-/* -------------------------------------- */
-
-.title, .author {
-  font-family: 'lato', 'Arial', sans-serif;
-  text-rendering: optimizeLegibility;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 400;
-  color: #5d5d5d;
-  text-align: center;
-}
-
-.title {
-  font-size: 2.7em;
-  margin-bottom: .5em;
-}
-
-.author {
-  font-size: 1.8em;
-  margin-bottom: 0px;
-}
 
 /* -------------------------------------- */
 /* RESULTS STYLES */
