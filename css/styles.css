@@ -58,6 +58,12 @@ body {
   margin: 0 auto;
 }
 
+.ion-eye {
+  font-size: 400%;
+  text-align: center;
+  vertical-align: middle;
+}
+
 /* -------------------------------------- */
 /* RESULTS STYLES */
 /* -------------------------------------- */

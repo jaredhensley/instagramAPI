@@ -79,7 +79,7 @@ function initMap() {
 
   var geocoder = new google.maps.Geocoder();
 
-  $('#submit').on('keydown click', function() {
+  $('.ion-eye').on('keydown click', function() {
     geocodeAddress(geocoder, map); 
   });
 
