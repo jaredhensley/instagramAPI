@@ -126,16 +126,20 @@ function geocodeAddress(geocoder, resultsMap) {
 
 
 $(document).ready(function() {
+
   if (location.hash.indexOf("access_token") > 0 ) {
     getInstagramAccessToken();
   } else {
   document.location = 'https://instagram.com/oauth/authorize/?client_id=2a86eedc95bf44a691694851ae41161e&redirect_uri=https://jaredhensley.github.io/instagramAPI/&response_type=token';
   }
+
+  var $overlay = $("<div id='overlay'></div>");
+  $("body").append($overlay);
   
   $(".results").on("click", "a", function(event){
     event.preventDefault();
     var href = $(this).attr("href");
-    console.log(href);
+    $overlay.show();
 
   });
 
