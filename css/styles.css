@@ -163,7 +163,7 @@ a {
   text-align: center;
 }
 
-#overlay img {
+#overlay img, video {
   margin-top: 10%;
   height: 75%;
 }

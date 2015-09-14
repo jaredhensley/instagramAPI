@@ -145,6 +145,7 @@ $(document).ready(function() {
     event.preventDefault();
     var href = $(this).attr("href");
     if (href.indexOf("jpg") > 0) {
+      $video.attr("src", "");
       $image.attr("src", href);
     } else if (href.indexOf("mp4") > 0) {
       $image.attr("src", "");
