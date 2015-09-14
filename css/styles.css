@@ -10,7 +10,7 @@
 
 body {
 	background-color: #fff;
-  background-image: url('../images/concrete_seamless.png');
+  /* background-image: url('../images/concrete_seamless.png'); */
 
 }
 
@@ -86,7 +86,7 @@ body {
   padding: 5px;
   text-align: center;
   margin: 0 auto;
-  background: none;
+  /* background: none; */
 }
 
 
