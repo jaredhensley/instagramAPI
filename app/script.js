@@ -132,7 +132,7 @@ $(document).ready(function() {
   document.location = 'https://instagram.com/oauth/authorize/?client_id=2a86eedc95bf44a691694851ae41161e&redirect_uri=https://jaredhensley.github.io/instagramAPI/&response_type=token';
   }
   
-  $(".results a").on("click", "a", function(event){
+  $(".results a").on("click", "a img", function(event){
     event.preventDefault();
     var href = $(this).attr("href");
     console.log(href);
