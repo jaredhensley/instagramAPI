@@ -135,14 +135,20 @@ $(document).ready(function() {
 
   var $overlay = $("<div id='overlay'></div>");
   var $image =  $("<img>");
+  var $video = $("<video>");
 
   $overlay.append($image);
+  $overlay.append($video);
   $("body").append($overlay);
   
   $(".results").on("click", "a", function(event){
     event.preventDefault();
     var href = $(this).attr("href");
-    $image.attr("src", href);
+    if (href.indexOf("jpg") > 0) {
+      $image.attr("src", href);
+    } else if (href.indexOf("mp4") > 0) {
+      $video.attr("src", href);
+    }
     $overlay.show();
   });
 
