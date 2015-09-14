@@ -165,7 +165,7 @@ a {
   text-align: center;
 }
 
-#overlay img {
+#overlay > img {
   margin-top: 10%;
-
+  opacity: 1;
 }
