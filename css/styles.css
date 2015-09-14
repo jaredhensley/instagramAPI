@@ -124,11 +124,7 @@ body {
 /* -------------------------------------- */
 
 img, video {
-  border: 1px solid #5d5d5d;
-  padding: 1%;
-  margin: .25%;
-  opacity:  .7;
-  background-color: #000;
+ 
 }
 
 img:hover, video:hover {
@@ -145,6 +141,11 @@ a {
    width: 24.5%;
    height: 32%;
    border-radius: 10px;
+   border: 1px solid #5d5d5d;
+   padding: 1%;
+   margin: .25%;
+   opacity:  .7;
+   background-color: #000;
 }
 
 /* -------------------------------------- */
