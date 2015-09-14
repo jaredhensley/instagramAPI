@@ -41,7 +41,7 @@ body {
 }
 
 .author {
-  font-size: 1.8em;
+  font-size: 1.5em;
   margin-bottom: 0px;
 }
 
@@ -92,6 +92,7 @@ body {
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
+  color: #5d5d5d;
 }
 
 #address {
