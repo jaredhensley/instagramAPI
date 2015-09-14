@@ -137,16 +137,13 @@ $(document).ready(function() {
   var $image =  $("<img>");
 
   $overlay.append($image);
-
   $("body").append($overlay);
   
   $(".results").on("click", "a", function(event){
     event.preventDefault();
     var href = $(this).attr("href");
-
     $image.attr("src", href);
     $overlay.show();
-
   });
 
   $overlay.on("click", function() {
