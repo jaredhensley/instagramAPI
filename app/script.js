@@ -135,7 +135,7 @@ $(document).ready(function() {
 
   var $overlay = $("<div id='overlay'></div>");
   var $image =  $("<img>");
-  var $video = $("<video>");
+  var $video = $("<video controls type='video/mp4'></video>");
 
   $overlay.append($image);
   $overlay.append($video);
@@ -147,6 +147,7 @@ $(document).ready(function() {
     if (href.indexOf("jpg") > 0) {
       $image.attr("src", href);
     } else if (href.indexOf("mp4") > 0) {
+      $image.attr("src", "");
       $video.attr("src", href);
     }
     $overlay.show();
