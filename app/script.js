@@ -149,4 +149,8 @@ $(document).ready(function() {
 
   });
 
+  $overlay.on("click", function() {
+    $overlay.hide();
+  });
+
 });
