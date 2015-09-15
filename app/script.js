@@ -52,7 +52,8 @@ function populateMap(totalResults) {
     pointer.marker = new google.maps.Marker({
         position: position,
         map: map,
-        title: pointer.caption.text
+        title: pointer.caption.text,
+        icon: pointer.image
 
     });
   }
