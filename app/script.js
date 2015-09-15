@@ -40,12 +40,12 @@ function getInstagramPhotoList(token, lastCreat, coords) {
 } // end getInstagramPhotoList
 
 
-function populateMap(data) {
-  for (var obj in data) {
+function populateMap(totalResults) {
+  for (var obj in totalResults) {
 
-    var pointer = data[obj];
+    var pointer = totalResults[obj];
 
-    pointer.image = "red_icon.png";
+    pointer.image = pointer.images.thumbnail.url;
 
     var position = new google.maps.LatLng(pointer.location.latitude, pointer.location.longitude);
 
