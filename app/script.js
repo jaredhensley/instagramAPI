@@ -49,7 +49,7 @@ function getInstagramPhotoList(token, lastCreat, coords) {
   })*/
   
 
-}
+
 function populateHTML(totalResults) {
   lastCreat = totalResults[totalResults.length-1].created_time;
   $.each(totalResults, function(index, value) {
