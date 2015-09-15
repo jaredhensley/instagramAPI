@@ -39,6 +39,17 @@ function getInstagramPhotoList(token, lastCreat, coords) {
 } // end getInstagramPhotoList
 
 
+/*function populateMap(totalResults) {
+  $.each(totalResults, function(index,value) {
+    var marker = new google.maps.Marker({
+        map: map,
+        position: results[index].location
+      });
+
+  })*/
+  
+
+}
 function populateHTML(totalResults) {
   lastCreat = totalResults[totalResults.length-1].created_time;
   $.each(totalResults, function(index, value) {
@@ -106,6 +117,7 @@ function geocodeAddress(geocoder, resultsMap) {
     'address': address
   }, function(results, status) {
     if (status === google.maps.GeocoderStatus.OK) {
+      console.log(results);
       resultsMap.setCenter(results[0].geometry.location);
       coords.lat = (results[0].geometry.location.G);
       coords.long = (results[0].geometry.location.K);
