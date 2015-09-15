@@ -39,14 +39,23 @@ function getInstagramPhotoList(token, lastCreat, coords) {
 } // end getInstagramPhotoList
 
 
-/*function populateMap(totalResults) {
-  $.each(totalResults, function(index,value) {
-    var marker = new google.maps.Marker({
-        map: map,
-        position: results[index].location
-      });
+/*function populateMap(data) {
+  for (var obj in data) {
 
-  })*/
+    var pointer = data[obj];
+
+    pointer.image = "red_icon.png";
+
+    var position = new google.maps.LatLng(pointer.location.latitude, pointer.location.longitude);
+
+    pointer.marker = new google.maps.Marker({
+        position: position,
+        map: map,
+        title: pointer.caption.text
+
+    });
+}
+*/
   
 
 
