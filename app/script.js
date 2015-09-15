@@ -31,6 +31,7 @@ function getInstagramPhotoList(token, lastCreat, coords) {
       });
           
       populateHTML(totalResults);
+      populateMap(totalResults);
 
     } //end success callback
 
@@ -39,7 +40,7 @@ function getInstagramPhotoList(token, lastCreat, coords) {
 } // end getInstagramPhotoList
 
 
-/*function populateMap(data) {
+function populateMap(data) {
   for (var obj in data) {
 
     var pointer = data[obj];
@@ -55,7 +56,7 @@ function getInstagramPhotoList(token, lastCreat, coords) {
 
     });
 }
-*/
+
   
 
 
