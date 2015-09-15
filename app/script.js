@@ -55,6 +55,7 @@ function populateMap(data) {
         title: pointer.caption.text
 
     });
+  }
 }
 
   
