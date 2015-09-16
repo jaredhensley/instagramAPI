@@ -50,8 +50,9 @@ function populateMap(totalResults) {
     var position = new google.maps.LatLng(pointer.location.latitude, pointer.location.longitude);
 
     function checkForTitleText {
-      if (pointer.caption.text) {return pointer.caption.text;}
-    } else {
+      if (pointer.caption.text) {
+        return pointer.caption.text;
+      } else {
       return "";
     }
 
