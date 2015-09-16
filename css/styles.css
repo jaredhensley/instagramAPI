@@ -56,6 +56,7 @@ body {
   height:300px;
   margin-bottom: 1em;
   border-radius: 10px;
+  border: 2px dotted #5d5d5d;
 }
 
 .map-container {
