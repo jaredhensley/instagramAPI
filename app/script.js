@@ -53,12 +53,12 @@ function populateMap(totalResults) {
         position: position,
         map: map,
         title: pointer.caption.text,
-        icon: pointer.image
+        icon: {
+          url: pointer.image,
+          size: new google.maps.Size(32,32)
+        }
 
     });
-
-    img[pointer.image].style.height = "50px";
-    img[pointer.image].style.width = "50px";
   }
 }
 
