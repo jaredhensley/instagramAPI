@@ -54,7 +54,8 @@ function populateMap(totalResults) {
         return pointer.caption.text;
       } else {
       return "";
-    }
+      }
+    }  
 
     pointer.marker = new google.maps.Marker({
         position: position,
