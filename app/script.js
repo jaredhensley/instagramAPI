@@ -46,7 +46,8 @@ function populateMap(totalResults) {
     var pointer = totalResults[obj];
 
     pointer.image = pointer.images.thumbnail.url;
-   
+    img[pointer.image].style.height = "50px";
+    img[pointer.image].style.width = "50px";
     var position = new google.maps.LatLng(pointer.location.latitude, pointer.location.longitude);
 
     pointer.marker = new google.maps.Marker({
@@ -56,6 +57,9 @@ function populateMap(totalResults) {
         icon: pointer.image
 
     });
+
+    img[pointer.image].style.height = "50px";
+    img[pointer.image].style.width = "50px";
   }
 }
 
