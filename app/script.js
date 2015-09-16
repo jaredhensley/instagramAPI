@@ -31,7 +31,7 @@ function getInstagramPhotoList(token, lastCreat, coords) {
       });
           
       populateHTML(totalResults);
-      populateMap(totalResults);
+      
 
     } //end success callback
 
@@ -53,7 +53,7 @@ function populateMap(totalResults) {
       if (pointer.caption.text) {
         return pointer.caption.text;
       } else {
-      return "";
+      return "test";
       }
     }  
 
@@ -82,6 +82,7 @@ function populateHTML(totalResults) {
       $(".results").append("<a href="+value.images.standard_resolution.url +"><img class='image' src=" + value.images.standard_resolution.url + ">" + "</a>");
     }
   });
+  populateMap(totalResults);
 }
 
 
