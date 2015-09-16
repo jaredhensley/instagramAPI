@@ -49,10 +49,16 @@ function populateMap(totalResults) {
 
     var position = new google.maps.LatLng(pointer.location.latitude, pointer.location.longitude);
 
+    function checkForTitleText {
+      if (pointer.caption.text) {return pointer.caption.text;},
+    } else {
+      return "";
+    }
+
     pointer.marker = new google.maps.Marker({
         position: position,
         map: map,
-        title: if (pointer.caption.text) {return pointer.caption.text;},
+        title: checkForTitleText();
         icon: {
           url: pointer.image,
           size: new google.maps.Size(32,32)
