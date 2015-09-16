@@ -131,8 +131,8 @@ function geocodeAddress(geocoder, resultsMap) {
     if (status === google.maps.GeocoderStatus.OK) {
       console.log(results);
       resultsMap.setCenter(results[0].geometry.location);
-      coords.lat = (results[0].geometry.location.G);
-      coords.long = (results[0].geometry.location.K);
+      coords.lat = (results[0].geometry.location.H);
+      coords.long = (results[0].geometry.location.L);
       var marker = new google.maps.Marker({
         map: resultsMap,
         position: results[0].geometry.location
