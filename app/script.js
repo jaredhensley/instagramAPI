@@ -1,9 +1,11 @@
 var totalResults = [];
+var markers = [];
 var coords = {lat: 40.71278, long: -74.006 };
 var map;
 var lastCreat;
 var oldAddress;
 var token;
+
 
 
 function getInstagramAccessToken() {
@@ -49,17 +51,13 @@ function clearMap() {
 }
 
 function populateMap(totalResults) {
-  /*clearMap();*/
+  clearMap();
   for (var obj in totalResults) {
-
     var pointer = totalResults[obj];
-
     pointer.image = pointer.images.thumbnail.url;
-
     var position = new google.maps.LatLng(pointer.location.latitude, pointer.location.longitude);
 
     function checkForTitleText() {
-
       if (pointer.caption && pointer.caption.text) {
         return pointer.caption.text;
       } else {
@@ -73,7 +71,7 @@ function populateMap(totalResults) {
         title: checkForTitleText(),
         icon: {
           url: pointer.image,
-          size: new google.maps.Size(32,32)
+          size: new google.maps.Size(40,40)
         }
 
     });
@@ -81,8 +79,6 @@ function populateMap(totalResults) {
 }
 
   
-
-
 function populateHTML(totalResults) {
 
   lastCreat = totalResults[totalResults.length-1].created_time;
@@ -152,7 +148,6 @@ function geocodeAddress(geocoder, resultsMap) {
     'address': address
   }, function(results, status) {
     if (status === google.maps.GeocoderStatus.OK) {
-      console.log(results);
       resultsMap.setCenter(results[0].geometry.location);
       coords.lat = (results[0].geometry.location.H);
       coords.long = (results[0].geometry.location.L);
@@ -160,7 +155,8 @@ function geocodeAddress(geocoder, resultsMap) {
         map: resultsMap,
         position: results[0].geometry.location
       });
-       getInstagramAccessToken()
+      markers.push(marker);
+      getInstagramAccessToken();
     } else {
       alert('Geocode was not successful for the following reason: ' + status);
     }
