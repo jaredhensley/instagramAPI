@@ -70,8 +70,8 @@ function populateMap(totalResults) {
       title: checkForTitleText(),
       icon: {
         url: pointer.image,
-        size: new google.maps.Size(40, 40),
-        scaledSize: new google.maps.Size(40, 40)
+        size: new google.maps.Size(80, 80),
+        scaledSize: new google.maps.Size(80, 80)
       }
     });
     markers.push(pointer.marker);
