@@ -65,7 +65,7 @@ function populateMap(totalResults) {
       }
     }  
 
-    pointer.marker = new google.maps.Marker({
+    var pointer.marker = new google.maps.Marker({
         position: position,
         map: map,
         title: checkForTitleText(),
@@ -73,8 +73,8 @@ function populateMap(totalResults) {
           url: pointer.image,
           size: new google.maps.Size(40,40)
         }
-
     });
+    markers.push(pointer.marker);
   }
 }
 
@@ -155,7 +155,6 @@ function geocodeAddress(geocoder, resultsMap) {
         map: resultsMap,
         position: results[0].geometry.location
       });
-      markers.push(marker);
       getInstagramAccessToken();
     } else {
       alert('Geocode was not successful for the following reason: ' + status);
