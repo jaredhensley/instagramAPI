@@ -5,7 +5,7 @@ var map;
 var lastCreat;
 var oldAddress;
 var token;
-var markers;
+
 
 
 function getInstagramAccessToken() {
