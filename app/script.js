@@ -51,7 +51,7 @@ function clearMap() {
 }
 
 function populateMap(totalResults) {
-  /*clearMap();*/
+  clearMap();
   for (var obj in totalResults) {
     var pointer = totalResults[obj];
     pointer.image = pointer.images.thumbnail.url;
