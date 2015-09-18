@@ -65,7 +65,7 @@ function populateMap(totalResults) {
       }
     }  
 
-    var pointer.marker = new google.maps.Marker({
+      pointer.marker = new google.maps.Marker({
         position: position,
         map: map,
         title: checkForTitleText(),
