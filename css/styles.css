@@ -132,6 +132,11 @@ img, video {
  
 }
 
+.media-parent {
+  display: inline-block;
+
+}
+
 img:hover, video:hover {
   opacity: 1;
   padding: 0;
