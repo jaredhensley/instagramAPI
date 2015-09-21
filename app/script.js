@@ -83,7 +83,7 @@ function populateHTML(totalResults) {
   lastCreat = totalResults[totalResults.length - 1].created_time;
   $.each(totalResults, function(index, value) {
     if (value.videos) {
-      $(".results").append("<a href=" + value.videos.low_resolution.url + "><video class='video' controls><source src=" + value.videos.low_resolution.url + " type='video/mp4'> </video> </a>");
+      $(".results").append("<a href=" + value.videos.standard_resolution.url + "><video class='video' controls><source src=" + value.videos.standard_resolution.url + " type='video/mp4'> </video> </a>");
     } else {
       $(".results").append("<a href=" + value.images.standard_resolution.url + "><img class='image' src=" + value.images.standard_resolution.url + ">" + "</a>");
     }
