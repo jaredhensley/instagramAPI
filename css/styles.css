@@ -182,14 +182,46 @@ a {
 /* MEDIA QUERIES */
 /* -------------------------------------- */
 
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   #address {
     width: 50%;
   }
+
   .center {
     max-width: 90%;
 
   }
+
+@media (max-width: 769px) {
+  .title {
+    font-size: 2.4em;
+  }
+  .author {
+    font-size: 1.3em;
+  }
+
+}
+
+@media (max-width: 641px) {
+  .title {
+    font-size: 2.2em;
+  }
+  .author {
+    font-size: 1.1em;
+  }
+
+}
+
+@media (max-width: 481px) {
+  .title {
+    font-size: 2em;
+  }
+  .author {
+    font-size: 1em;
+  }
+
+}
+
 
 
 
