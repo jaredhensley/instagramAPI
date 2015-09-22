@@ -194,7 +194,7 @@ a {
 
 @media (max-width: 769px) {
   .title {
-    font-size: 2.4em;
+    font-size: 2em;
   }
   .author {
     font-size: 1.3em;
@@ -204,7 +204,7 @@ a {
 
 @media (max-width: 641px) {
   .title {
-    font-size: 2.2em;
+    font-size: 1.8em;
   }
   .author {
     font-size: 1.1em;
@@ -214,7 +214,7 @@ a {
 
 @media (max-width: 481px) {
   .title {
-    font-size: 2em;
+    font-size: 1.5em;
   }
   .author {
     font-size: 1em;
