@@ -116,7 +116,7 @@ function initMap() {
 
   var geocoder = new google.maps.Geocoder();
 
-  $('.ion-eye').on('keydown', function(e) {
+  $('#address').on('keydown', function(e) {
     if (e.which === 13) {
       geocodeAddress(geocoder, map);
     } else {
