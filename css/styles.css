@@ -147,20 +147,21 @@ a {
   font-size: 0;
 }
 
-.results {
+/* flexbox styles */
+/* .results {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-}
+} */
 
 .image, .video {
-   /* width: 24.5%; */
-   width: 300px;
+   width: 24.5%; 
+   /* width: 300px; flexbox */
    height: 32%;
    border-radius: 10px;
    border: 1px solid #5d5d5d;
-  /*  padding: .15%;
-  margin: .25%; */
+   padding: .15%;
+   margin: .25%; 
    opacity:  .7;
    background-color: #000;
 }
