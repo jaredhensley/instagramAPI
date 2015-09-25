@@ -116,10 +116,22 @@ function initMap() {
 
   var geocoder = new google.maps.Geocoder();
 
-  $('.ion-eye').on('keydown click', function() {
-    geocodeAddress(geocoder, map);
+  $('.ion-eye').on('keydown', function(e) {
+    if (e.which === 13) {
+      geocodeAddress(geocoder, map);
+    } else {
+      /*geocodeAddress(geocoder, map); */ 
+    }
+    
+  });
+
+  $('.ion-eye').on('click', function(e) {
+      geocodeAddress(geocoder, map);
   });
 }
+
+
+
 
 function checkIfNewAddress(address) {
   if (address !== oldAddress) {
