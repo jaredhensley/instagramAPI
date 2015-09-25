@@ -38,7 +38,9 @@ function getInstagramPhotoList(token, lastCreat, coords) {
         } //end success callback
 
     }); // end ajax call
+
     clearCoords(); // resetting coords array for next search
+    
   } // end getInstagramPhotoList
 
 function clearMap() {
@@ -89,6 +91,8 @@ function populateHTML(totalResults) {
     }
   });
   populateMap(totalResults);
+
+  
 }
 
 function clearResults() {
@@ -119,10 +123,7 @@ function initMap() {
   $('#address').on('keydown', function(e) {
     if (e.which === 13) {
       geocodeAddress(geocoder, map);
-    } else {
-      /*geocodeAddress(geocoder, map); */ 
-    }
-    
+    }   
   });
 
   $('.ion-eye').on('click', function(e) {
