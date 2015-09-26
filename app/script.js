@@ -184,6 +184,7 @@ $(document).ready(function() {
   var $caption = $("<p></p>");
 
   $overlay.append($image);
+  $overlay.append($caption);
   $overlay.append($video);
   $overlay.append($caption);
   $("body").append($overlay);
