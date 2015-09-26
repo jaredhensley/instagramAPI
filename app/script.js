@@ -194,14 +194,17 @@ $(document).ready(function() {
       $video.hide();
       $image.show();
       $image.attr("src", href);
+      var captionText = $(this).attr("data-user");
+      $caption.text("<a href=" + this.prev("a").attr("data-link") + ">" + captionText + "</a>");
     } else if (href.indexOf("mp4") > 0) {
       $image.attr("src", "");
       $image.hide();
       $video.show();
       $video.attr("src", href);
+      var captionText = $(this).attr("data-user");
+      $caption.text("<a href=" + this.prev("a").attr("data-link") + ">" + captionText + "</a>");
     }
-    var captionText = $(this).attr("data-user");
-    $caption.text("<a href=" + this.attr("data-link") + ">" + captionText + "</a>");
+    
     $overlay.show();
   });
 
