@@ -207,6 +207,9 @@ a {
   .author {
     font-size: 1.3em;
   }
+  .img, .video {
+    width: ;
+  }
 
 }
 

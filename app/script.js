@@ -40,7 +40,7 @@ function getInstagramPhotoList(token, lastCreat, coords) {
     }); // end ajax call
 
     clearCoords(); // resetting coords array for next search
-    
+
   } // end getInstagramPhotoList
 
 function clearMap() {
@@ -85,7 +85,7 @@ function populateHTML(totalResults) {
   lastCreat = totalResults[totalResults.length - 1].created_time;
   $.each(totalResults, function(index, value) {
     if (value.videos) {
-      $(".results").append("<div class='media-parent'><a href=" + value.videos.standard_resolution.url + "><video class='video' controls><source src=" + value.videos.standard_resolution.url + " type='video/mp4'> </video> </a> </div>");
+      $(".results").append("<div class='media-parent'><a data-user=" + value.user.username + " href=" + value.videos.standard_resolution.url + "><video class='video' controls><source src=" + value.videos.standard_resolution.url + " type='video/mp4'> </video> </a> </div>");
     } else {
       $(".results").append("<div class='media-parent'><a href=" + value.images.standard_resolution.url + "><img class='image' src=" + value.images.standard_resolution.url + ">" + "</a></div>");
     }
