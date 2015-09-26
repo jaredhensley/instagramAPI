@@ -195,14 +195,14 @@ $(document).ready(function() {
       $image.show();
       $image.attr("src", href);
       var captionText = $(this).attr("data-user");
-      $caption.html("<a href=" + $(this).attr("data-link") + ">" + captionText + "</a>");
+      $caption.append("<a href=" + $(this).attr("data-link") + ">" + captionText + "</a>");
     } else if (href.indexOf("mp4") > 0) {
       $image.attr("src", "");
       $image.hide();
       $video.show();
       $video.attr("src", href);
       var captionText = $(this).attr("data-user");
-      $caption.html("<a href=" + $(this).attr("data-link") + ">" + captionText + "</a>");
+      $caption.append("<a href=" + $(this).attr("data-link") + ">" + captionText + "</a>");
     }
     
     $overlay.show();
