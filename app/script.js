@@ -201,7 +201,7 @@ $(document).ready(function() {
       $video.attr("src", href);
     }
     var captionText = $(this).attr("data-user");
-    $caption.text("<a href=" + this.attr(data-link) + ">" + captionText + "</a>");
+    $caption.text("<a href=" + this.attr("data-link") + ">" + captionText + "</a>");
     $overlay.show();
   });
 
