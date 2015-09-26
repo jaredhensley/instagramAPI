@@ -199,9 +199,9 @@ $(document).ready(function() {
       $image.attr("src", "");
       $video.attr("src", href);
     }
-    $overlay.show();
     var captionText = $(this).attr("data-user");
     $caption.text(captionText);
+    $overlay.show();
   });
 
   $overlay.on("click", function() {
