@@ -85,9 +85,9 @@ function populateHTML(totalResults) {
   lastCreat = totalResults[totalResults.length - 1].created_time;
   $.each(totalResults, function(index, value) {
     if (value.videos) {
-      $(".results").append("<div class='media-parent'><a data-user=" + value.user.username + " href=" + value.videos.standard_resolution.url + "><video class='video' controls><source src=" + value.videos.standard_resolution.url + " type='video/mp4'></video></a></div>");
+      $(".results").append("<div class='media-parent'><a data-link=" + value.link + " data-user=" + value.user.username + " href=" + value.videos.standard_resolution.url + "><video class='video' controls><source src=" + value.videos.standard_resolution.url + " type='video/mp4'></video></a></div>");
     } else {
-      $(".results").append("<div class='media-parent'><a data-user=" + value.user.username + " href=" + value.images.standard_resolution.url + "><img class='image' src=" + value.images.standard_resolution.url + ">" + "</a></div>");
+      $(".results").append("<div class='media-parent'><a data-link=" + value.link + " data-user=" + value.user.username + " href=" + value.images.standard_resolution.url + "><img class='image' src=" + value.images.standard_resolution.url + ">" + "</a></div>");
     }
   });
   populateMap(totalResults);
@@ -130,8 +130,6 @@ function initMap() {
       geocodeAddress(geocoder, map);
   });
 }
-
-
 
 
 function checkIfNewAddress(address) {
@@ -184,7 +182,6 @@ $(document).ready(function() {
   var $caption = $("<p></p>");
 
   $overlay.append($image);
-  $overlay.append($caption);
   $overlay.append($video);
   $overlay.append($caption);
   $("body").append($overlay);
@@ -204,7 +201,7 @@ $(document).ready(function() {
       $video.attr("src", href);
     }
     var captionText = $(this).attr("data-user");
-    $caption.text(captionText);
+    $caption.text("<a href=" + this.attr(data-link) + ">" + captionText + "</a>");
     $overlay.show();
   });
 
