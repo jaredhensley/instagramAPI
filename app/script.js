@@ -194,9 +194,13 @@ $(document).ready(function() {
     var href = $(this).attr("href");
     if (href.indexOf("jpg") > 0) {
       $video.attr("src", "");
+      $video.hide();
+      $image.show();
       $image.attr("src", href);
     } else if (href.indexOf("mp4") > 0) {
       $image.attr("src", "");
+      $image.hide();
+      $video.show();
       $video.attr("src", href);
     }
     var captionText = $(this).attr("data-user");
