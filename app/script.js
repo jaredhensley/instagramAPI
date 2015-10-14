@@ -151,8 +151,8 @@ function geocodeAddress(geocoder, resultsMap) {
   }, function(results, status) {
     if (status === google.maps.GeocoderStatus.OK) {
       resultsMap.setCenter(results[0].geometry.location);
-      coords.lat = (results[0].geometry.location.H);
-      coords.long = (results[0].geometry.location.L);
+      coords.lat = (results[0].geometry.location.lat());
+      coords.long = (results[0].geometry.location.lng());
       var marker = new google.maps.Marker({
         map: resultsMap,
         position: results[0].geometry.location
