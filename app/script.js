@@ -29,6 +29,7 @@ function getInstagramPhotoList(token, lastCreat, coords) {
       },
       dataType: 'jsonp',
       success: function(response) {
+          console.log(response);
           response.data.forEach(function(data) {
             totalResults.push(data);
           });
